@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher List</title>
+</head>
+<body>
+<table border="1" class = "students-table">
+
+
+
+    <thead>
+    <tr>
+        <th> Teacher </th>
+        <th> Course </th>
+        <th> Year </th>
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="teacher : ${teacherList}">
+        <td th:text="${teacher.firstName}"></td>
+        <td th:text="${teacher.course}"></td>
+        <td th:text="${teacher.year}"></td>
+        <td>   <a th:href="@{/deleteTeacher/{id}(id=${teacher.id})}" class="edit-button" > X </a> |
+            <a th:href="@{/showFormForUpdateTeacher/{id}(id=${teacher.id})}" class="edit-button" > Update </a>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

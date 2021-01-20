@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8/>
+	<title>School System</title>
+
+
+	
+</head>
+<body>
+	
+
+
+
+
+	<div class = "container">		
+
+		<p></p>
+				
+		<h1> Вход </h1>
+		<form th:action="@{/login}" method="post">
+			
+			<!-- error message -->
+			<div th:if="${param.error}" class="form-group">
+				<div class="alert-danger">Грешно име или парола.</div>
+			</div>
+		
+			<!-- logout message -->
+			<div th:if="${param.logout}" class="form-group">
+				<div class="alert-info">Излязохте от профила си.</div>
+			</div>
+			
+			<div class = "form-group">
+				<label for ="username"> Username </label>
+				<input type="text" class = "form-control" id ="username" name = "username"
+				placeholder="Usernanme" autofocus="autofocus">
+			</div>
+			
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"
+					id="password" name="password" class="form-control"
+					placeholder="Password" />
+			</div>
+			
+			<div class="form-group">
+						<input type="submit" name="login-submit" id="login-submit"
+							class="submit" value="Влезте в профила си" />
+				</div>
+
+				<P></P>
+
+			</div>
+
+
+</body>
+</html>

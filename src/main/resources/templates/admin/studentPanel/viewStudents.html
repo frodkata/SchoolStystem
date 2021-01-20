@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Menu</title>
+</head>
+<body>
+
+
+
+
+<table border="1" class = "students-table" >
+    <thead>
+    <tr>
+        <th> Student </th>
+        <th></th>
+        <th> Year </th>
+        <th> Parent </th>
+        <th></th>
+        <th>EGN</th>
+
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="student : ${studentList}">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+
+        <td th:text="${student.year}"></td>
+
+        <td th:text="${student.parent.firstName}"></td>
+        <td th:text="${student.parent.lastName}"></td>
+
+        <td th:text="${student.egn}"></td>
+
+
+
+        <td> <a th:href="@{/deleteStudent/{id}(id=${student.id})}" class="edit-button" > X </a> |
+            <a th:href="@{/showFormForUpdateStudent/{id}(id=${student.id})}" class="edit-button" > Update </a>
+
+        </td>
+
+
+
+    </tr>
+    </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8/>
+	<title>Регистрация</title>
+
+</head>
+<body>
+	
+
+
+
+<br>
+<br>
+	<!-- Create HTML registration form -->
+	<div class="container">
+		
+				
+
+				<h1>Register Admin</h1>
+
+				<!-- success message -->
+				<div th:if="${param.success}">
+					<div class="alert-info">Registration successful!</div>
+				</div>
+				<br>
+
+				<form th:action="@{/registration}" method="post" th:object="${user}">
+
+
+					<div class="form-group">
+						<label class="control-label" for="username"> username </label> <input
+							id="email" class="form-control" th:field="*{username}" required
+							placeholder="Username" autofocus="autofocus" />
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="password"> password </label> <input
+							id="password" class="form-control" type="password"
+							placeholder="Password"	th:field="*{password}" required autofocus="autofocus" />
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="submit">register</button>
+					</div>
+
+		
+			
+		
+	</div>
+</body>
+</html>

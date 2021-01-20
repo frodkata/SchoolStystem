@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1" class = "students-table">
+
+
+
+    <thead>
+    <tr>
+        <th> Student </th>
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="student : ${studentList}" >
+        <td th:text="${student.firstName}"></td>
+        <td>
+            <a th:href="@{/showMarkAbsentForm/{id}(id=${student.id})}" class="edit-button" > Mark Absent </a> |
+            <a th:href="@{/showNewGradeForm/{id}(id=${student.id})}" class="edit-button" > New Grade </a> |
+            <a th:href="@{/viewGrades/{id}(id=${student.id})}" class="edit-button" > View Grades </a> |
+
+
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

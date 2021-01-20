@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+</head>
+<body>
+
+
+<form action="#" th:action="@{/markAbsent}" th:object="${student}"
+      method="POST">
+
+    <h1>Mark Absent</h1>
+
+
+    <input type="hidden" th:field="*{id}" />
+    <input type="hidden" th:field="*{firstName}" />
+    <input type="hidden" th:field="*{lastName}" />
+    <input type="hidden" th:field="*{year}" />
+    <input type="hidden" th:field="*{parent}" />
+
+
+    <input type="text" th:field="*{absences}" placeholder="Absences " >
+
+
+
+
+    <button type="submit" class="submit">Save</button>
+
+
+
+
+
+
+</form>
+
+</body>
+</html>

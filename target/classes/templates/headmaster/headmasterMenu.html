@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headmaster Menu</title>
+</head>
+<body>
+<h1>TEACHERS</h1>
+
+<table border="1" class = "students-table">
+
+
+
+    <thead>
+    <tr>
+        <th> Teacher </th>
+        <th> Course </th>
+        <th> Year </th>
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="teacher : ${teacherList}">
+        <td th:text="${teacher.firstName}"></td>
+        <td th:text="${teacher.course}"></td>
+        <td th:text="${teacher.year}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h1>STUDENTS</h1>
+
+<table border="1" class = "students-table" >
+    <thead>
+    <tr>
+        <th> Student </th>
+        <th></th>
+        <th> Year </th>
+        <th> Parent </th>
+        <th></th>
+        <th>EGN</th>
+
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="student : ${studentList}">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+
+        <td th:text="${student.year}"></td>
+
+        <td th:text="${student.parent.firstName}"></td>
+        <td th:text="${student.parent.lastName}"></td>
+
+        <td th:text="${student.egn}"></td>
+
+
+
+
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

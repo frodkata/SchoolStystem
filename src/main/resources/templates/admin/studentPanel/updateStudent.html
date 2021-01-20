@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student</title>
+</head>
+<body>
+<form th:action="@{/updateStudent}" method="post" th:object="${student}" >
+
+    <input type="hidden" th:field="*{id}" />
+    <input type="hidden" th:field="*{parent}" />
+
+    <input type="text" th:field=="${student.firstName}" name="name" placeholder="student first name"/>
+    <input type="text" th:field=="${student.lastName}" name="name" placeholder="student last name"/>
+
+    <select th:field=="${student.year}" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+
+    <input type="text" th:field=="${student.parent.firstName}" name="name" placeholder="parent first name"/>
+    <input type="text" th:field=="${student.parent.lastName}" name="name" placeholder="parent last name"/>
+
+    <input type="text" th:field=="${student.egn}" name="name" placeholder="EGN"/>
+
+    <button type="submit">Update Student</button>
+
+</form>
+
+</body>
+</html>

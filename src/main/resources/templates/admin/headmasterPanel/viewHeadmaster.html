@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Headmaster</title>
+</head>
+<body>
+<table border="1" class = "students-table">
+
+
+
+    <thead>
+    <tr>
+        <th> Headmaster </th>
+        <th> School Name </th>
+        <th> School Address </th>
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="headmaster : ${headmaster}">
+        <td th:text="${headmaster.firstName}"></td>
+        <td th:text="${headmaster.schoolName}"></td>
+        <td th:text="${headmaster.schoolAddress}"></td>
+        <td>  <a th:href="@{/deleteHeadmaster}" class="edit-button" > X </a> |
+        <a th:href="@{/showFormForUpdateHeadmaster}" class="edit-button" > Update </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

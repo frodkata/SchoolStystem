@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1" class = "students-table">
+    <thead>
+    <tr>
+        grade
+    </tr>
+
+    </thead>
+
+    <tbody>
+    <tr th:each="grades : ${gradesList}">
+        <td th:text="${grades.grade}"></td>
+        <td>
+            <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="edit-button" > X </a>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
