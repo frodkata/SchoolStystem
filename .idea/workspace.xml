@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/UserRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/UserRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Headmaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Headmaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/UserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/ParentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/ParentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/TeacherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -19,7 +19,7 @@ public class UserRegistrationController {
 	private UserService userService;
 
 	
-	@ModelAttribute("user")
+	@ModelAttribute("userProfile")
     public UserProfile user() {
         return new UserProfile();
     }
