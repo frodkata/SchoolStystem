@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="" />
+    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/HeadmasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/HeadmasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/UserRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/UserRegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/UserRegistrationDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/HeadmasterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/HeadmasterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/UserRegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/UserRegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/UserRegistrationDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,20 +38,38 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1mNSHl3QopvpekuUhpWYXf75wWl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="ElektronenDnevnik" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="ElektronenDnevnik.services" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\headmaster" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\teacher" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\parent" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin\headmasterPanel" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin\teacherPanel" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\java\ElektronenDnevnik\services" />
@@ -42,12 +80,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ElektronenDnevnik.entities" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\headmaster" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\teacher" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\parent" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin\headmasterPanel" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin\teacherPanel" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ElektronenDnevnik.services" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -62,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.Application" />
       <module name="ElektronenDnevnik" />
@@ -76,9 +110,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GradesServiceTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ElektronenDnevnik" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ElektronenDnevnik.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ElektronenDnevnik.services" />
+      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.services.GradesServiceTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.GradesServiceTest.getAll" />
       </list>
     </recent_temporary>
   </component>
@@ -94,5 +145,18 @@
       <updated>1609332469589</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

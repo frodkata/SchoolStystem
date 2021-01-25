@@ -2,7 +2,6 @@ package ElektronenDnevnik.controllers;
 
 import ElektronenDnevnik.entities.Role;
 import ElektronenDnevnik.entities.User;
-import ElektronenDnevnik.entities.UserRegistrationDto;
 import ElektronenDnevnik.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -8,7 +8,6 @@
 
 
 
-
 <table border="1" class = "students-table" >
     <thead>
     <tr>
@@ -18,7 +17,7 @@
         <th> Parent </th>
         <th></th>
         <th>EGN</th>
-
+        <th>Username</th>
 
     </tr>
 
@@ -37,6 +36,7 @@
         <td th:text="${student.parent.lastName}"></td>
 
         <td th:text="${student.egn}"></td>
+        <td th:text="${student.parent.user.username}"></td>
 
 
 

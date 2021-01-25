@@ -34,7 +34,12 @@ public class HeadmasterController {
         model.addAttribute("teacherList", teacherList);
         model.addAttribute("studentList", studentsList);
 
+        //Grade statistics
+
         return "headmaster/headmasterMenu";
     }
+
+
+
 
 }
