@@ -45,7 +45,7 @@ public class ParentServiceImpl implements ParentService {
     @Override
     public  Parent getParentByUserId(Long id){
         for (Parent p : parentRepository.findAll()) {
-            if(p.getUser().getId().equals(id)){
+            if(p.getUserProfile().getId().equals(id)){
                 return p;
             }
         }

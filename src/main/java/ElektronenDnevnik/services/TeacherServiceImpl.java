@@ -57,7 +57,7 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public Teacher getTeacherByUserId(Long id) {
         for (Teacher t : teacherRepository.findAll()) {
-            if(t.getUser().getId().equals(id)){
+            if(t.getUserProfile().getId().equals(id)){
                 return t;
             }
         }

@@ -1,7 +1,7 @@
 package ElektronenDnevnik.controllers;
 
 import ElektronenDnevnik.entities.Role;
-import ElektronenDnevnik.entities.User;
+import ElektronenDnevnik.entities.UserProfile;
 import ElektronenDnevnik.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +20,8 @@ public class UserRegistrationController {
 
 	
 	@ModelAttribute("user")
-    public User user() {
-        return new User();
+    public UserProfile user() {
+        return new UserProfile();
     }
 	
 	@GetMapping
@@ -32,9 +32,9 @@ public class UserRegistrationController {
 
 	
 	@PostMapping
-	public String registerUserAccount(@ModelAttribute("user") User user) {
-		user.setRole(Role.ADMIN);
-		userService.save(user);
+	public String registerUserAccount(@ModelAttribute("userProfile") UserProfile userProfile) {
+		userProfile.setRole(Role.ADMIN);
+		userService.save(userProfile);
 		return "redirect:/registration?success";
 	}
 }

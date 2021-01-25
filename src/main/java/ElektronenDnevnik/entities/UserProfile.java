@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name =  "user", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
-public class User {
+@Table(name =  "user_profile", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
+public class UserProfile {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -19,11 +19,11 @@ public class User {
 
 
 
-	public User() {
+	public UserProfile() {
 		
 	}
 
-	public User(String username, String password, Role role) {
+	public UserProfile(String username, String password, Role role) {
 		super();
 
 		this.username = username;

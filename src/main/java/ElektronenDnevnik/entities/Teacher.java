@@ -1,12 +1,6 @@
 package ElektronenDnevnik.entities;
 
-import org.springframework.stereotype.Controller;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "teacher")
@@ -31,7 +25,7 @@ public class Teacher {
     // https://www.baeldung.com/jpa-one-to-one
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user;
+    private UserProfile userProfile;
 
 
     public Long getId() {
@@ -76,11 +70,11 @@ public class Teacher {
         this.year = year;
     }
 
-    public User getUser() {
-        return user;
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
 }

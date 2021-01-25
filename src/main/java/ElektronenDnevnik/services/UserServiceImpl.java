@@ -1,6 +1,6 @@
 package ElektronenDnevnik.services;
 
-import ElektronenDnevnik.entities.User;
+import ElektronenDnevnik.entities.UserProfile;
 import ElektronenDnevnik.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -27,28 +27,28 @@ public class UserServiceImpl implements UserService{
 
 
 	@Override
-	public User save(User user) {
-		String password = passwordEncoder.encode(user.getPassword());
-		user.setPassword(password);
-		return userRepository.save(user);
+	public UserProfile save(UserProfile userProfile) {
+		String password = passwordEncoder.encode(userProfile.getPassword());
+		userProfile.setPassword(password);
+		return userRepository.save(userProfile);
 	}
 
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 	
-		User user = userRepository.findByUsername(username);
-		if(user == null) {
+		UserProfile userProfile = userRepository.findByUsername(username);
+		if(userProfile == null) {
 			throw new UsernameNotFoundException("Invalid username or password.");
 		}
 
 
 		//https://stackoverflow.com/questions/37615034/spring-security-spring-boot-how-to-set-roles-for-users
 		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-			grantedAuthorities.add(new SimpleGrantedAuthority(user.getRole().toString()));
+			grantedAuthorities.add(new SimpleGrantedAuthority(userProfile.getRole().toString()));
 
 
-		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
+		return new org.springframework.security.core.userdetails.User(userProfile.getUsername(), userProfile.getPassword(), grantedAuthorities);
 	}
 	
 
@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService{
 	 * Get current logged user object
 	 * */
 	@Override
-	public User getCurrentUser() {
+	public UserProfile getCurrentUser() {
 		String username;
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
@@ -69,9 +69,9 @@ public class UserServiceImpl implements UserService{
 			username = principal.toString();
 		}
 
-		User currentUser = userRepository.findByUsername(username);
+		UserProfile currentUserProfile = userRepository.findByUsername(username);
 
-		return currentUser;
+		return currentUserProfile;
 	}
 
 	@Override

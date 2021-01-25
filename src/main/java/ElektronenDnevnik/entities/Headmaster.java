@@ -24,7 +24,7 @@ public class Headmaster {
     // https://www.baeldung.com/jpa-one-to-one
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user;
+    private UserProfile userProfile;
 
 
 
@@ -68,11 +68,11 @@ public class Headmaster {
         this.schoolAddress = schoolAddress;
     }
 
-    public User getUser() {
-        return user;
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
 }

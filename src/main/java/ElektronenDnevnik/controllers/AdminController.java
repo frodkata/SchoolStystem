@@ -4,7 +4,6 @@ package ElektronenDnevnik.controllers;
 import ElektronenDnevnik.entities.*;
 import ElektronenDnevnik.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,18 +65,18 @@ public class AdminController {
     public String saveStudent(@ModelAttribute("student") Student student) {
 
 
-        //Create new User with ROLE.PARENT
-       User user = new User();
-       user.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
-       user.setPassword("1234"); //TEST PASSWORD
-       user.setRole(Role.PARENT); //Set role
-       student.getParent().setUser(user); //Add user profile to Student entity
+        //Create new UserProfile with ROLE.PARENT
+       UserProfile userProfile = new UserProfile();
+       userProfile.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
+       userProfile.setPassword("1234"); //TEST PASSWORD
+       userProfile.setRole(Role.PARENT); //Set role
+       student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student entity
 
 
          //Save new student to repository
         studentService.saveStudent(student);
-        //Save new user to repository
-        userService.save(user);
+        //Save new userProfile to repository
+        userService.save(userProfile);
 
         return "redirect:/";
     }
@@ -102,7 +101,7 @@ public class AdminController {
 
 
         //Delete Parent user profile from repository
-        userService.deleteUserById(studentToDelete.getParent().getUser().getId());
+        userService.deleteUserById(studentToDelete.getParent().getUserProfile().getId());
 
         //Delete  Parent from repository
         parentService.deleteParentById(studentToDelete.getParent().getId());
@@ -131,7 +130,7 @@ public class AdminController {
 
     }
 
-    //save updated Teacher without changing User
+    //save updated Teacher without changing UserProfile
     @PostMapping("/updateStudent")
     public String updateStudent(@ModelAttribute("student") Student student) {
         studentService.saveStudent(student);
@@ -159,18 +158,18 @@ public class AdminController {
 
 
 
-        //Create new User with ROLE.TEACHER
-        User user = new User();
-        user.setUsername("T_"+userService.randomStringForUsername()); //Create username
-        user.setPassword("1234"); //TEST PASSWORD
-        user.setRole(Role.TEACHER); //Add TEACHER role to User
-        teacher.setUser(user); //Add user profile to Teacher entity
+        //Create new UserProfile with ROLE.TEACHER
+        UserProfile userProfile = new UserProfile();
+        userProfile.setUsername("T_"+userService.randomStringForUsername()); //Create username
+        userProfile.setPassword("1234"); //TEST PASSWORD
+        userProfile.setRole(Role.TEACHER); //Add TEACHER role to UserProfile
+        teacher.setUserProfile(userProfile); //Add userProfile profile to Teacher entity
 
 
         //Save new Teacher to repository
         teacherService.saveTeacher(teacher);
-        //Save new User to repository
-        userService.save(user);
+        //Save new UserProfile to repository
+        userService.save(userProfile);
 
 
         return "redirect:/";
@@ -194,7 +193,7 @@ public class AdminController {
     public String deleteTeacher(@PathVariable(value = "id") long id) {
 
         //Delete Teacher profile from repository
-        userService.deleteUserById(teacherService.getTeacherById(id).getUser().getId());
+        userService.deleteUserById(teacherService.getTeacherById(id).getUserProfile().getId());
 
         //Delete Teacher from repository
         teacherService.deleteTeacherById(id);
@@ -215,7 +214,7 @@ public class AdminController {
 
     }
 
-    //save updated Teacher without changing User
+    //save updated Teacher without changing UserProfile
     @PostMapping("/updateTeacher")
     public String updateTeacher(@ModelAttribute("teacher") Teacher teacher) {
 
@@ -246,18 +245,18 @@ public class AdminController {
             return "redirect:/?error";
 
         }else{
-            //Create new User with ROLE.HEADMASTER
-            User user = new User();
-            user.setUsername("H_"+headmaster.getFirstName()); //Create username
-            user.setPassword("1234"); //TEST PASSWORD
-            user.setRole(Role.HEADMASTER); //Add HEADMASTER role to User
-            headmaster.setUser(user); //Add user profile to Headmaster entity
+            //Create new UserProfile with ROLE.HEADMASTER
+            UserProfile userProfile = new UserProfile();
+            userProfile.setUsername("H_"+headmaster.getFirstName()); //Create username
+            userProfile.setPassword("1234"); //TEST PASSWORD
+            userProfile.setRole(Role.HEADMASTER); //Add HEADMASTER role to UserProfile
+            headmaster.setUserProfile(userProfile); //Add userProfile profile to Headmaster entity
 
 
             //Save new Headmaster to repository
             headmasterService.saveHeadmaster(headmaster);
-            //Save new User to repository
-            userService.save(user);
+            //Save new UserProfile to repository
+            userService.save(userProfile);
 
 
             return "redirect:/";
@@ -284,7 +283,7 @@ public class AdminController {
     @GetMapping("/deleteHeadmaster")
     public String deleteHeadmaster() {
 
-        Long userId = headmasterService.getHeadmaster().getUser().getId(); //for deleting User
+        Long userId = headmasterService.getHeadmaster().getUserProfile().getId(); //for deleting UserProfile
 
         //Delete Headmaster profile from repository
         userService.deleteUserById(userId);
@@ -308,7 +307,7 @@ public class AdminController {
 
     }
 
-    //save updated Headmaster without changing User
+    //save updated Headmaster without changing UserProfile
     @PostMapping("/updateHeadmaster")
     public String updateHeadmaster(@ModelAttribute("headmaster") Headmaster headmaster) {
         headmasterService.saveHeadmaster(headmaster);

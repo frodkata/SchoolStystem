@@ -27,7 +27,7 @@
         <td th:text="${teacher.firstName}"></td>
         <td th:text="${teacher.course}"></td>
         <td th:text="${teacher.year}"></td>
-        <td th:text="${teacher.user.username}"></td>
+        <td th:text="${teacher.userProfile.username}"></td>
 
         <td>   <a th:href="@{/deleteTeacher/{id}(id=${teacher.id})}" class="edit-button" > X </a> |
             <a th:href="@{/showFormForUpdateTeacher/{id}(id=${teacher.id})}" class="edit-button" > Update </a>
