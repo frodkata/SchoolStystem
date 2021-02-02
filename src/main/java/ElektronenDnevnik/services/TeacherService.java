@@ -12,6 +12,5 @@ public interface TeacherService {
     void saveTeacher(Teacher teacher);
     Teacher getTeacherById(long id);
     void deleteTeacherById(long id);
-    Teacher getTeacherByCourse(Course course);
     Teacher getTeacherByUserId(Long id);
 }

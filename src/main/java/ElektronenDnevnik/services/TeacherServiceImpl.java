@@ -1,6 +1,5 @@
 package ElektronenDnevnik.services;
 
-import ElektronenDnevnik.entities.Course;
 import ElektronenDnevnik.entities.Teacher;
 import ElektronenDnevnik.repositories.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,17 +41,6 @@ public class TeacherServiceImpl implements TeacherService {
         teacherRepository.deleteById(id);
     }
 
-
-    @Override
-    public Teacher getTeacherByCourse(Course course) {
-        for (Teacher t : teacherRepository.findAll()) {
-            if(t.getCourse().equals(course)){
-                return t;
-            }
-        }
-
-        throw new RuntimeException("Student course not found for name ::" + course);
-    }
 
     @Override
     public Teacher getTeacherByUserId(Long id) {

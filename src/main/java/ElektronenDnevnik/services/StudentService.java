@@ -15,6 +15,5 @@ public interface StudentService {
     Student getStudentById(Long id);
     void deleteStudentById(Long id);
     List<Student> getStudentsByYear(int year);
-    void markAbsent(Student student);
 
 }

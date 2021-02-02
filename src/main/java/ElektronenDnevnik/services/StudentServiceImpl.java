@@ -59,11 +59,6 @@ public class StudentServiceImpl implements StudentService {
         return students;
     }
 
-    @Override
-    public void markAbsent(Student student) {
-        int abs = student.getAbsences();
-        abs++;
-        student.setAbsences(abs);
-    }
+
 }
 

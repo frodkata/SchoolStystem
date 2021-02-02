@@ -7,7 +7,7 @@
 <body>
 <form th:action="@{/updateTeacher}" method="post" th:object="${teacher}">
     <input type="hidden" th:field="*{id}" />
-    <input type="hidden" th:field="*{user}" />
+    <input type="hidden" th:field="*{userProfile}" />
 
 
     <input type="text" th:field=="${teacher.firstName}" name="name" placeholder="teacher first name"/>
