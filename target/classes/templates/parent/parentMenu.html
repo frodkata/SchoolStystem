@@ -1,51 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Student Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="jumbotron text-center">
+        <h1>Електронен дневник</h1>
+        <p>New Bulgarian University</p>
+    </div>
+    <div class="container">
+        <a th:href = "@{/logout}" role="button" class="btn btn-primary btn-lg btn-block">Logout <i class="fas fa-sign-out-alt"></i></a>
+        <br>
+        <h3>Student information</h3>
+        <table border="1" class = "table table-bordered shadow border rounded-lg">
+            <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Year</th>
+                <th>EGN</th>
+                <th>Absences</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${parent.student.firstName}"></td>
+                <td th:text="${parent.student.lastName}"></td>
+                <td  th:text="${parent.student.year}"></td>
+                <td  th:text="${parent.student.egn}"></td>
+                <td  th:text="${parent.student.absences}"></td>
+            </tr>
+            </tbody>
+        </table>
 
-
-<table border="1" class = "students-table">
-
-    <thead>
-    <tr></tr>
-    </thead>
-
-    <tbody>
-    <tr>
-        <th>Name</th>
-        <td th:text="${parent.student.firstName}"></td>
-    </tr>
-
-    <tr>
-        <th>Absences</th>
-        <td  th:text="${parent.student.absences}"></td>
-    </tr>
-
-
-
-    </tbody>
-</table>
-
-<p></p>
-<table border="1" class = "students-table">
-
-
-
-    <thead>
-    <th th:each="grades : ${parent.student.grades}" th:text="${grades.course}"> Grade </th>
-    </thead>
-
-
-
-    <tbody>
-    <tr>
-        <td  th:each="grades : ${parent.student.grades}" th:text="${grades.grade}"></td>
-    </tr>
-    </tbody>
-</table>
-
+        <br>
+        <h3>Grades</h3>
+        <table border="1" class="table table-striped">
+            <thead>
+                <th th:each="grades : ${parent.student.grades}" th:text="${grades.course}"> Grade </th>
+            </thead>
+            <tbody>
+            <tr>
+                <td  th:each="grades : ${parent.student.grades}" th:text="${grades.grade}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

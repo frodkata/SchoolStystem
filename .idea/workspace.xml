@@ -2,37 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Changed access to /registration to &quot;ADMIN&quot; only">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/updateStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/updateStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/newTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/newTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/headmaster/headmasterMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/headmaster/headmasterMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parent/parentMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parent/parentMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/markAbsent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/markAbsent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/newGrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/newGrade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/teacherMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/teacherMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/viewGrades.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/viewGrades.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/newStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/updateStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/updateStudent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/newTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/newTeacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/updateTeacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/headmaster/headmasterMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/headmaster/headmasterMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parent/parentMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parent/parentMenu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/markAbsent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/markAbsent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/newGrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/newGrade.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/teacherMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/teacherMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/viewGrades.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/viewGrades.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ElektronenDnevnik/controllers/AdminControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ElektronenDnevnik/controllers/AdminControllerTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -223,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612480086405</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Bootstrap to views">
+      <created>1612481343180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612481343180</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -253,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed form sending NULL EGN" />
     <MESSAGE value="Changed access to /registration to &quot;ADMIN&quot; only" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed access to /registration to &quot;ADMIN&quot; only" />
+    <MESSAGE value="Added Bootstrap to views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Bootstrap to views" />
   </component>
 </project>

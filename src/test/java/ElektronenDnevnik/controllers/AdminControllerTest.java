@@ -1,90 +1,121 @@
 package ElektronenDnevnik.controllers;
 
+import ElektronenDnevnik.entities.Student;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestContext;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.web.servlet.MockMvc;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-
+//https://www.petrikainulainen.net/programming/spring-framework/unit-testing-of-spring-mvc-controllers-normal-controllers/
+@SpringBootTest
+@AutoConfigureMockMvc
 class AdminControllerTest {
 
+    @Autowired
+    private MockMvc mockMvc;
+
     @Test
-    void index() {
+    @WithMockUser(username = "admin", roles = { "ADMIN" })
+    void index() throws Exception {
+        this.mockMvc.perform(get("/"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("admin/index"));
     }
 
     @Test
-    void showNewStudentForm() {
+    @WithMockUser(username = "admin", roles = { "ADMIN" })
+    void showNewStudentForm() throws Exception{
+        this.mockMvc.perform(get("/showNewStudentForm"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("admin/studentPanel/newStudent"))
+                .andExpect(model().attributeExists("student"));
+    }
+/*
+    @Test
+    @WithMockUser(username = "admin", roles = { "ADMIN" })
+    void saveStudent() throws Exception{
+        mockMvc.perform(post("/saveStudent").with(csrf())
+            //    .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        )
+              //  .andExpect(status().isOk())
+                .andExpect(forwardedUrl("/"))
+                .andReturn();
+    }
+
+ */
+
+    @Test
+    void viewStudents() throws Exception{
     }
 
     @Test
-    void saveStudent() {
+    void deleteStudent() throws Exception{
     }
 
     @Test
-    void viewStudents() {
+    void showFormForUpdateStudent() throws Exception{
     }
 
     @Test
-    void deleteStudent() {
+    void updateStudent() throws Exception{
     }
 
     @Test
-    void showFormForUpdateStudent() {
+    void showNewTeacherForm() throws Exception{
     }
 
     @Test
-    void updateStudent() {
+    void saveTeacher() throws Exception{
     }
 
     @Test
-    void showNewTeacherForm() {
+    void teacher() throws Exception{
     }
 
     @Test
-    void saveTeacher() {
+    void deleteTeacher() throws Exception{
     }
 
     @Test
-    void teacher() {
+    void showFormForUpdateTeacher() throws Exception{
     }
 
     @Test
-    void deleteTeacher() {
+    void updateTeacher() throws Exception{
     }
 
     @Test
-    void showFormForUpdateTeacher() {
+    void showNewHeadmasterForm() throws Exception{
     }
 
     @Test
-    void updateTeacher() {
+    void saveHeadmaster() throws Exception{
     }
 
     @Test
-    void showNewHeadmasterForm() {
+    void viewHeadmaster() throws Exception{
     }
 
     @Test
-    void saveHeadmaster() {
+    void deleteHeadmaster() throws Exception{
     }
 
     @Test
-    void viewHeadmaster() {
+    void showFormForUpdateHeadmaster() throws Exception{
     }
 
     @Test
-    void deleteHeadmaster() {
-    }
-
-    @Test
-    void showFormForUpdateHeadmaster() {
-    }
-
-    @Test
-    void updateHeadmaster() {
+    void updateHeadmaster() throws Exception{
     }
 }
