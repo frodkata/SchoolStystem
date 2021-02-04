@@ -50,10 +50,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		//https://stackoverflow.com/questions/33673300/spring-security-java-configuration-for-authenticated-users-with-a-role
-		http.authorizeRequests().antMatchers( "/", "/showNewStudentForm", "/saveStudent" , "/viewStudents" , "/showNewTeacherForm" , "/saveTeacher" , "/viewTeachers" , "/saveParent").hasRole("ADMIN")
+		http.authorizeRequests().antMatchers( "/", "/showNewStudentForm", "/saveStudent" , "/viewStudents" , "/showNewTeacherForm" , "/saveTeacher" , "/viewTeachers" , "/saveParent", "/registration").hasRole("ADMIN")
 				.antMatchers( "/parentMenu").hasRole("PARENT")
 				.antMatchers( "/teacherMenu").hasRole("TEACHER")
-				.antMatchers( "/registration").permitAll()
 				.anyRequest().authenticated()
 		.and()
 		.formLogin()
