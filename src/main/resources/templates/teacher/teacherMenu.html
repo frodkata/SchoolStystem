@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-<table border="1" class = "students-table">
-
-
-
-    <thead>
-    <tr>
-        <th> Student </th>
-
-    </tr>
-
-    </thead>
-
-
-
-    <tbody>
-    <tr th:each="student : ${studentList}" >
-        <td th:text="${student.firstName}"></td>
-        <td>
-            <a th:href="@{/showMarkAbsentForm/{id}(id=${student.id})}" class="edit-button" > Mark Absent </a> |
-            <a th:href="@{/showNewGradeForm/{id}(id=${student.id})}" class="edit-button" > New Grade </a> |
-            <a th:href="@{/viewGrades/{id}(id=${student.id})}" class="edit-button" > View Grades </a> |
-
-
-        </td>
-    </tr>
-
-    </tbody>
-</table>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Teacher menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Електронен дневник</h1>
+            <p>New Bulgarian University</p>
+        </div>
+        <div class="container">
+            <a th:href = "@{/logout}" role="button" class="btn btn-primary btn-lg btn-block">Logout <i class="fas fa-sign-out-alt"></i></a>
+            <br>
+            <h3>Students list</h3>
+            <table class ="table table-striped">
+            <thead>
+            <tr>
+                <th>Student</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${studentList}" >
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+                <td>
+                    <a th:href="@{/showMarkAbsentForm/{id}(id=${student.id})}" class="edit-button" ><i class="fas fa-user-times"></i> Mark absents </a> |
+                </td>
+                <td>
+                    <a th:href="@{/showNewGradeForm/{id}(id=${student.id})}" class="edit-button" ><i class="far fa-plus-square"></i> Add Grade</a> |
+                </td>
+                <td>
+                    <a th:href="@{/viewGrades/{id}(id=${student.id})}" class="edit-button" ><i class="fas fa-list-ul"></i> View grades</a> |
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </body>
 </html>

@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Teacher List</title>
-</head>
-<body>
-<table border="1" class = "students-table">
+    <head>
+        <meta charset="UTF-8">
+        <title>All teachers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Електронен дневник</h1>
+            <p>New Bulgarian University</p>
+        </div>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a th:href = "@{/}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href = "@{/viewStudents}" class="nav-link">View Students</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href = "@{/viewTeachers}" class="nav-link active">View Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href = "@{/viewHeadmaster}" class="nav-link">View Headmaster</a>
+                </li>
+                <li class="nav-item">
+                </li>
+                <li class="nav-item">
+                    <a th:href = "@{/logout}" class="nav-link">Logout <i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>
 
+            <br>
+            <table border="1" class = "table table-striped">
+                <thead>
+                <tr>
+                    <th>Teacher Name</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="teacher : ${teacherList}">
+                    <td th:text="${teacher.firstName}"></td>
+                    <td th:text="${teacher.course}"></td>
+                    <td th:text="${teacher.year}"></td>
+                    <td th:text="${teacher.userProfile.username}"></td>
 
+                    <td>   <a th:href="@{/deleteTeacher/{id}(id=${teacher.id})}" data-toggle="deletetip" title="Delete user!"> <i class="fas fa-trash-alt"></i> </a> |
+                        <a th:href="@{/showFormForUpdateTeacher/{id}(id=${teacher.id})}" data-toggle="updatetip" title="Update user"> <i class="fas fa-user-edit"></i> </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <thead>
-    <tr>
-        <th> Teacher </th>
-        <th> Course </th>
-        <th> Year </th>
-        <th> Username</th>
-
-    </tr>
-
-    </thead>
-
-
-
-    <tbody>
-    <tr th:each="teacher : ${teacherList}">
-        <td th:text="${teacher.firstName}"></td>
-        <td th:text="${teacher.course}"></td>
-        <td th:text="${teacher.year}"></td>
-        <td th:text="${teacher.userProfile.username}"></td>
-
-        <td>   <a th:href="@{/deleteTeacher/{id}(id=${teacher.id})}" class="edit-button" > X </a> |
-            <a th:href="@{/showFormForUpdateTeacher/{id}(id=${teacher.id})}" class="edit-button" > Update </a>
-
-        </td>
-    </tr>
-    </tbody>
-</table>
-</body>
+        <script>
+                $(document).ready(function(){
+                  $('[data-toggle="deletetip"]').tooltip();
+                  $('[data-toggle="updatetip"]').tooltip();
+                });
+        </script>
+    </body>
 </html>

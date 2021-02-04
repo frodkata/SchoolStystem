@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Student</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Edit Student</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Електронен дневник</h1>
+            <p>New Bulgarian University</p>
+        </div>
+        <div class="container">
+            <a th:href = "@{/teacherMenu}" role="button" class="btn btn-primary btn-lg btn-block"><i class="fas fa-chevron-left"></i> Go back</a>
+            <br>
+            <h3>Mark Absent</h3>
+            <form action="#" th:action="@{/markAbsent}" th:object="${student}"
+              method="POST">
+                <input type="hidden" th:field="*{id}" />
+                <input type="hidden" th:field="*{firstName}" />
+                <input type="hidden" th:field="*{lastName}" />
+                <input type="hidden" th:field="*{year}" />
+                <input type="hidden" th:field="*{parent}" />
+                <input type="hidden" th:field="*{egn}" />
 
 
-<form action="#" th:action="@{/markAbsent}" th:object="${student}"
-      method="POST">
+                <div class = "form-group">
+                    <input class="form-control" type="text" th:field="*{absences}" placeholder="Absences " >
+                </div>
 
-    <h1>Mark Absent</h1>
-
-
-    <input type="hidden" th:field="*{id}" />
-    <input type="hidden" th:field="*{firstName}" />
-    <input type="hidden" th:field="*{lastName}" />
-    <input type="hidden" th:field="*{year}" />
-    <input type="hidden" th:field="*{parent}" />
-    <input type="hidden" th:field="*{egn}" />
-
-
-
-    <input type="text" th:field="*{absences}" placeholder="Absences " >
-
-
-
-
-    <button type="submit" class="submit">Save</button>
-
-
-
-
-
-
-</form>
-
-</body>
+                <div class = "form-group">
+                    <button type="submit" class="btn btn-info">Save</button>
+                </div>
+        </form>
+        </div>
+    </body>
 </html>

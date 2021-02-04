@@ -3,54 +3,49 @@
 <head>
 	<meta charset=utf-8/>
 	<title>School System</title>
-
-
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-	
+	<div class="jumbotron text-center">
+		<h1>Електронен дневник</h1>
+		<p>New Bulgarian University</p>
+	</div>
 
+	<div class = "container shadow p-3 my-3 border rounded-lg">
+		<!-- logout message -->
+		<div th:if="${param.logout}" class="form-group">
+			<div class="alert alert-success">Излязохте от профила си.</div>
+		</div>
 
-
-
-	<div class = "container">		
-
-		<p></p>
-				
 		<h1> Вход </h1>
 		<form th:action="@{/login}" method="post">
-			
+
 			<!-- error message -->
 			<div th:if="${param.error}" class="form-group">
-				<div class="alert-danger">Грешно име или парола.</div>
+				<div class="alert alert-danger">Грешно име или парола.</div>
 			</div>
-		
-			<!-- logout message -->
-			<div th:if="${param.logout}" class="form-group">
-				<div class="alert-info">Излязохте от профила си.</div>
-			</div>
-			
+
 			<div class = "form-group">
 				<label for ="username"> Username </label>
 				<input type="text" class = "form-control" id ="username" name = "username"
-				placeholder="Usernanme" autofocus="autofocus">
+				placeholder="Usernanme" autofocus="autofocus" required>
 			</div>
-			
+
 			<div class="form-group">
 				<label for="password">Password</label> <input type="password"
 					id="password" name="password" class="form-control"
-					placeholder="Password" />
+					placeholder="Password" required/>
 			</div>
-			
+
 			<div class="form-group">
-						<input type="submit" name="login-submit" id="login-submit"
-							class="submit" value="Влезте в профила си" />
-				</div>
-
-				<P></P>
-
+				<input type="submit" name="login-submit" id="login-submit"
+							class="submit btn btn-primary" value="Влезте в профила си" />
 			</div>
-
-
+		</form>
+	</div>
 </body>
 </html>
