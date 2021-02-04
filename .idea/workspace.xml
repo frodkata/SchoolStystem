@@ -3,34 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/ParentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/ParentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/UserRegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/UserRegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Headmaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Headmaster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Parent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Parent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/ParentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/ParentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/TeacherServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/markAbsent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/markAbsent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/updateTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ElektronenDnevnik/controllers/AdminControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ElektronenDnevnik/controllers/AdminControllerTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdminControllerTest">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.Application" />
       <module name="ElektronenDnevnik" />
@@ -137,48 +115,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TeacherServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminControllerTest.index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElektronenDnevnik" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ElektronenDnevnik.services.*" />
+          <option name="PATTERN" value="ElektronenDnevnik.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ElektronenDnevnik.services" />
-      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.services.TeacherServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TeacherServiceTest.getTeacherByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ElektronenDnevnik" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ElektronenDnevnik.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ElektronenDnevnik.services" />
-      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.services.TeacherServiceTest" />
-      <option name="METHOD_NAME" value="getTeacherByUserId" />
+      <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
+      <option name="METHOD_NAME" value="index" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminControllerTest.saveStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElektronenDnevnik" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ElektronenDnevnik.services.*" />
+          <option name="PATTERN" value="ElektronenDnevnik.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ElektronenDnevnik.services" />
-      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="save" />
+      <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
+      <option name="METHOD_NAME" value="saveStudent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminControllerTest.showNewStudentForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ElektronenDnevnik" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ElektronenDnevnik.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
+      <option name="METHOD_NAME" value="showNewStudentForm" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdminControllerTest" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.UserServiceTest.save" />
-        <item itemvalue="JUnit.TeacherServiceTest" />
-        <item itemvalue="JUnit.TeacherServiceTest.getTeacherByUserId" />
+        <item itemvalue="JUnit.AdminControllerTest.saveStudent" />
+        <item itemvalue="JUnit.AdminControllerTest.showNewStudentForm" />
+        <item itemvalue="JUnit.AdminControllerTest.index" />
+        <item itemvalue="JUnit.AdminControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +185,17 @@
       <updated>1609332469589</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
