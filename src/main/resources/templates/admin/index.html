@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Admin panel</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Електронен дневник</h1>
-            <p>New Bulgarian University</p>
-        </div>
-        <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewStudents}" class="nav-link">View Students</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewTeachers}" class="nav-link">View Teachers</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewHeadmaster}" class="nav-link">View Headmaster</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/logout}" class="nav-link">Logout <i class="fas fa-sign-out-alt"></i></a>
-                </li>
-            </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
+<div th:if="${param.success}">
+    <div class="alert-danger">Operation successful!</div>
+</div>
+
+
+<div th:if="${param.error}">
+    <div class="alert-danger">A headmaster already exists!</div>
+</div>
+<p>
+
+<p>
+
+
+<table border="1" class = "students-table">
+
+
+
+    <thead>
+    <tr>
+        <th> Student </th>
+        <th> Teacher</th>
+        <th> Headmaster</th>
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr>
+        <td ><a th:href = "@{/showNewStudentForm}" class="primary-button"> New Student </a>
             <br>
-            <div th:if="${param.success}">
-                <div class="alert alert-warning">Operation successful!</div>
-            </div>
-            <div th:if="${param.error}">
-                <div class="alert alert-danger">A headmaster already exists!</div>
-            </div>
+            <a th:href = "@{/viewStudents}" class="primary-button"> View Students </a>
 
-            <div class="list-group">
-                <a th:href = "@{/showNewStudentForm}" class="list-group-item list-group-item-action">Add new Student </a>
-                <a th:href = "@{/showNewTeacherForm}" class="list-group-item list-group-item-action">Add new Teacher </a>
-                <a th:href = "@{/showNewHeadmasterForm}" class="list-group-item list-group-item-action">Add new Headmaster </a>
-                <a th:href = "@{/registration}" class="list-group-item list-group-item-action">Add new admin</a>
-            </div>
-        </div>
-    </body>
+        </td>
+        <td><a th:href = "@{/showNewTeacherForm}" class="primary-button"> New Teacher </a>
+            <br>
+            <a th:href = "@{/viewTeachers}" class="primary-button"> View Teachers </a>
+            <br>
+
+        </td>
+        <td><a th:href = "@{/showNewHeadmasterForm}" class="primary-button"> New Headmaster </a>
+            <br>
+            <a th:href = "@{/viewHeadmaster}" class="primary-button"> View Headmaster </a>
+            <br>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href = "@{/registration}" class="primary-button"> Add another Admin </a> |
+
+<a th:href = "@{/logout}" class="primary-button"> Logout </a>
+
+
+</body>
 </html>

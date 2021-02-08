@@ -1,79 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>All students</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Електронен дневник</h1>
-            <p>New Bulgarian University</p>
-        </div>
-        <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a th:href = "@{/}" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active">View Students</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewTeachers}" class="nav-link">View Teachers</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewHeadmaster}" class="nav-link">View Headmaster</a>
-                </li>
-                <li class="nav-item">
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/logout}" class="nav-link">Logout <i class="fas fa-sign-out-alt"></i></a>
-                </li>
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Menu</title>
+</head>
+<body>
 
-            <br>
-            <table border="1"  class="table table-striped">
-                <thead>
-                <tr>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Year</th>
-                    <th>Parent name</th>
-                    <th>Last name</th>
-                    <th>EGN</th>
-                    <th>Username</th>
-                    <th>Edit</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="student : ${studentList}">
-                    <td th:text="${student.firstName}"></td>
-                    <td th:text="${student.lastName}"></td>
-                    <td th:text="${student.year}"></td>
-                    <td th:text="${student.parent.firstName}"></td>
-                    <td th:text="${student.parent.lastName}"></td>
-                    <td th:text="${student.egn}"></td>
-                    <td th:text="${student.parent.userProfile.username}"></td>
 
-                    <td>
-                        <a th:href="@{/deleteStudent/{id}(id=${student.id})}" data-toggle="deletetip" title="Delete user!"> <i class="fas fa-trash-alt"></i> </a> |
-                        <a th:href="@{/showFormForUpdateStudent/{id}(id=${student.id})}" data-toggle="updatetip" title="Update user"> <i class="fas fa-user-edit"></i>  </a>
-                    </td>
-                </tr>
-                </tbody>
-                </table>
-        </div>
 
-        <script>
-            $(document).ready(function(){
-              $('[data-toggle="deletetip"]').tooltip();
-              $('[data-toggle="updatetip"]').tooltip();
-            });
-        </script>
-    </body>
+<table border="1" class = "students-table" >
+    <thead>
+    <tr>
+        <th> Student </th>
+        <th></th>
+        <th> Year </th>
+        <th> Parent </th>
+        <th></th>
+        <th>EGN</th>
+        <th>Username</th>
+
+    </tr>
+
+    </thead>
+
+
+
+    <tbody>
+    <tr th:each="student : ${studentList}">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+
+        <td th:text="${student.year}"></td>
+
+        <td th:text="${student.parent.firstName}"></td>
+        <td th:text="${student.parent.lastName}"></td>
+
+        <td th:text="${student.egn}"></td>
+        <td th:text="${student.parent.userProfile.username}"></td>
+
+
+
+        <td> <a th:href="@{/deleteStudent/{id}(id=${student.id})}" class="edit-button" > X </a> |
+            <a th:href="@{/showFormForUpdateStudent/{id}(id=${student.id})}" class="edit-button" > Update </a>
+
+        </td>
+
+
+
+    </tr>
+    </tbody>
+    </table>
+</body>
 </html>

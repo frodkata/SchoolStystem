@@ -1,81 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Update Teacher</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Електронен дневник</h1>
-            <p>New Bulgarian University</p>
-        </div>
-        <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a th:href = "@{/}" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewStudents}" class="nav-link">View Students</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewTeachers}" class="nav-link">View Teachers</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/viewHeadmaster}" class="nav-link">View Headmaster</a>
-                </li>
-                <li class="nav-item">
-                    <a th:href = "@{/logout}" class="nav-link">Logout <i class="fas fa-sign-out-alt"></i></a>
-                </li>
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <title>Update Teacher</title>
+</head>
+<body>
+<form th:action="@{/updateTeacher}" method="post" th:object="${teacher}">
+    <input type="hidden" th:field="*{id}" />
+    <input type="hidden" th:field="*{userProfile}" />
 
-            <br>
-            <h2>Update teacher</h2>
-            <form th:action="@{/updateTeacher}" method="post" th:object="${teacher}">
-                <input type="hidden" th:field="*{id}" />
-                <input type="hidden" th:field="*{userProfile}" />
 
-                <div class="form-group">
-                    <input type="text" th:field=="${teacher.firstName}" class="form-control" name="name" placeholder="teacher first name" required/>
-                </div>
-                <div class="form-group">
-                    <input type="text" th:field=="${teacher.lastName}" class="form-control" name="name" placeholder="teacher last name" required/>
-                </div>
+    <input type="text" th:field=="${teacher.firstName}" name="name" placeholder="teacher first name"/>
+    <input type="text" th:field=="${teacher.lastName}" name="name" placeholder="teacher last name"/>
 
-                <div class="form-group">
-                    <select th:field=="${teacher.course}" class="form-control">
-                        <option th:each="course : ${T(ElektronenDnevnik.entities.Course).values()}"
-                                th:value="${course}"
-                                th:text="${course}">
-                        </option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select th:field=="${teacher.year}" class="form-control">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                </div>
+    <select th:field=="${teacher.course}">
+        <option th:each="course : ${T(ElektronenDnevnik.entities.Course).values()}"
+                th:value="${course}"
+                th:text="${course}">
+        </option>
+    </select>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-secondary">Update Teacher</button>
-                </div>
-            </form>
-        </div>
-    </body>
+    <select th:field=="${teacher.year}">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <button type="submit">Update Teacher</button>
+</form>
+</body>
 </html>
