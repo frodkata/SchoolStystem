@@ -15,6 +15,8 @@
         <th> School Name </th>
         <th> School Address </th>
         <th> Username</th>
+        <th> Email</th>
+
     </tr>
 
     </thead>
@@ -27,6 +29,7 @@
         <td th:text="${headmaster.schoolName}"></td>
         <td th:text="${headmaster.schoolAddress}"></td>
         <td th:text="${headmaster.userProfile.username}"></td>
+        <td th:text="${headmaster.email}"></td>
 
         <td>  <a th:href="@{/deleteHeadmaster}" class="edit-button" > X </a> |
         <a th:href="@{/showFormForUpdateHeadmaster}" class="edit-button" > Update </a>

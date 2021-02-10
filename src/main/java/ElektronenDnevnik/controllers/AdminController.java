@@ -4,6 +4,8 @@ package ElektronenDnevnik.controllers;
 import ElektronenDnevnik.entities.*;
 import ElektronenDnevnik.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -37,6 +39,8 @@ public class AdminController {
     @Autowired
     GradesService gradesService;
 
+    @Autowired
+    private JavaMailSender emailSender;
 
 
 
@@ -73,18 +77,26 @@ public class AdminController {
             return "admin/studentPanel/newStudent";
         }
         //As Parent is created by creating Student, i couldn't place @Valid to validate parent model, as there is no parent model,
-        //so validation on parent fields is done manually here
+        //so validation on parent fields is done  here
         else if(student.getParent().getFirstName().equals("") || student.getParent().getLastName().equals("")){
             return "admin/studentPanel/newStudent";
         }else{
 
 
+            //Both Student and Parent are created at the same time, based on the idea that the Parent has access to the account
             //Create new UserProfile with ROLE.PARENT
             UserProfile userProfile = new UserProfile();
             userProfile.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
             userProfile.setPassword(student.getEgn());
             userProfile.setRole(Role.PARENT); //Set role
             student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student entity
+
+            //Send password and username to Parent email
+            SimpleMailMessage message = new SimpleMailMessage();
+            message.setTo(student.getParent().getEmail());
+            message.setSubject("School System Account");
+            message.setText("Username: "+ userProfile.getUsername() + "\n Password: " + userProfile.getPassword());
+            emailSender.send(message);
 
 
             //Save new student to repository
@@ -195,6 +207,12 @@ public class AdminController {
             userProfile.setRole(Role.TEACHER); //Add TEACHER role to UserProfile
             teacher.setUserProfile(userProfile); //Add userProfile profile to Teacher entity
 
+            //Send password and username to email
+            SimpleMailMessage message = new SimpleMailMessage();
+            message.setTo(teacher.getEmail());
+            message.setSubject("School System Account");
+            message.setText("Username: "+ userProfile.getUsername() + "\n Password: " + userProfile.getPassword());
+            emailSender.send(message);
 
             //Save new Teacher to repository
             teacherService.saveTeacher(teacher);
@@ -291,6 +309,12 @@ public class AdminController {
                 userProfile.setRole(Role.HEADMASTER); //Add HEADMASTER role to UserProfile
                 headmaster.setUserProfile(userProfile); //Add userProfile profile to Headmaster entity
 
+                //Send password and username to email
+                SimpleMailMessage message = new SimpleMailMessage();
+                message.setTo(headmaster.getEmail());
+                message.setSubject("School System Account");
+                message.setText("Username: "+ userProfile.getUsername() + "\n Password: " + userProfile.getPassword());
+                emailSender.send(message);
 
                 //Save new Headmaster to repository
                 headmasterService.saveHeadmaster(headmaster);

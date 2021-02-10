@@ -20,6 +20,10 @@ public class Parent {
     @OneToOne(mappedBy = "parent")
     private Student student;
 
+    @Column(name = "email")
+    private String email;
+
+
 
     // https://www.baeldung.com/jpa-one-to-one
     @OneToOne(cascade = CascadeType.ALL)
@@ -66,5 +70,13 @@ public class Parent {
 
     public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

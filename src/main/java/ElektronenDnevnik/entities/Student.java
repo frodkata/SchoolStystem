@@ -1,10 +1,7 @@
 package ElektronenDnevnik.entities;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 import java.util.List;
 
@@ -32,9 +29,10 @@ public class Student {
     @Pattern(regexp="[\\d]{10}", message = "Must contain 10 digits")   //String of digits with size 10
     private String egn;
 
-
     @Column(name = "year")
     private int year;
+
+
 
 
    // https://www.baeldung.com/jpa-one-to-one
@@ -46,6 +44,8 @@ public class Student {
     //https://www.baeldung.com/hibernate-one-to-many
     @OneToMany(mappedBy="student")
     private List<Grades> grades;
+
+
 
 
 

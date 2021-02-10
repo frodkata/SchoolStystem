@@ -24,6 +24,7 @@
     <input type="text" th:field=="${headmaster.schoolAddress}" name="name" placeholder="School address "/>
     <span th:if="${#fields.hasErrors('schoolAddress')}" th:errors="*{schoolAddress}"></span>
 
+    <input type="text" th:field=="${headmaster.email}" name="name" placeholder="headmaster email"/>
 
 
     <button type="submit" class="submit"> Update headmaster </button>

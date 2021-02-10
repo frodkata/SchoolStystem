@@ -53,6 +53,9 @@
     <input type="text" th:field=="${student.egn}" name="name" placeholder="EGN"/>
     <span th:if="${#fields.hasErrors('egn')}" th:errors="*{egn}"></span>
 
+
+    <input type="text" th:field=="${student.parent.email}" name="email" placeholder="Valid email to receive password"/>
+
     <button type="submit">Save Student</button>
 
 </form>

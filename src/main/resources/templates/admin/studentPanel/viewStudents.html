@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teacher Menu</title>
+    <title>View Students</title>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
         <th></th>
         <th>EGN</th>
         <th>Username</th>
-
+        <th>Parent Email</th>
     </tr>
 
     </thead>
@@ -37,6 +37,8 @@
 
         <td th:text="${student.egn}"></td>
         <td th:text="${student.parent.userProfile.username}"></td>
+        <td th:text="${student.parent.email}"></td>
+
 
 
 

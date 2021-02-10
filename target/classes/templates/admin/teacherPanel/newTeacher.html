@@ -6,11 +6,11 @@
 </head>
 <body>
 <form th:action="@{/saveTeacher}" method="post" th:object="${teacher}">
-    <input type="text" th:field=="${teacher.firstName}" name="name" placeholder="teacher first name"/>
+    <input type="text" th:field=="${teacher.firstName}" name="firstName" placeholder="teacher first name"/>
     <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First name error</span>
 
 
-    <input type="text" th:field=="${teacher.lastName}" name="name" placeholder="teacher last name"/>
+    <input type="text" th:field=="${teacher.lastName}" name="lastName" placeholder="teacher last name"/>
     <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">First name error</span>
 
 
@@ -35,6 +35,10 @@
         <option value="11">11</option>
         <option value="12">12</option>
     </select>
+
+    <input type="text" th:field=="${teacher.email}" name="email" placeholder="valid email"/>
+
+
     <button type="submit">Save Teacher</button>
 </form>
 

@@ -28,6 +28,10 @@ public class Teacher {
     @Column(name = "year")
     private int year;
 
+    @Column(name = "email")
+    private String email;
+
+
     // https://www.baeldung.com/jpa-one-to-one
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
@@ -82,5 +86,13 @@ public class Teacher {
 
     public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

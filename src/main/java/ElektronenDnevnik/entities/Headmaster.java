@@ -34,6 +34,9 @@ public class Headmaster {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private UserProfile userProfile;
 
+    @Column(name = "email")
+    private String email;
+
 
 
     public Long getId() {
@@ -82,5 +85,13 @@ public class Headmaster {
 
     public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

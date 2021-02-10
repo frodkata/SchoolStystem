@@ -1,6 +1,7 @@
 package ElektronenDnevnik.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.util.Collection;
 
 @Entity
@@ -16,7 +17,6 @@ public class UserProfile {
 	private String password;
 
     private Role role;
-
 
 
 	public UserProfile() {
