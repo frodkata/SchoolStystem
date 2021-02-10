@@ -17,10 +17,12 @@ public class Student {
 
     @Column(name = "first_name")
     @NotEmpty(message = "Field cannot be left empty!")
+    @Pattern(regexp="[A-Za-z]+$", message = "Must contain only latin letters!")
     private String firstName;
 
     @Column(name = "last_name")
     @NotEmpty(message = "Field cannot be left empty!")
+    @Pattern(regexp="[A-Za-z]+$", message = "Must contain only latin letters!")
     private String lastName;
 
     @Column(name = "absences")

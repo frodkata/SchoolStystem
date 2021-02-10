@@ -44,9 +44,11 @@
     </select>
 
     <input type="text" th:field=="${student.parent.firstName}" name="name" placeholder="parent first name"/>
+    <span th:if="${#fields.hasErrors('parent.firstName')}" th:errors="*{parent.firstName}">First Name error</span>
 
 
     <input type="text" th:field=="${student.parent.lastName}" name="name" placeholder="parent last name"/>
+    <span th:if="${#fields.hasErrors('parent.lastName')}" th:errors="*{parent.lastName}">Last Name error</span>
 
     <input type="text" th:field=="${student.egn}" name="name" placeholder="EGN"/>
     <span th:if="${#fields.hasErrors('egn')}" th:errors="*{egn}">EGN error</span>
@@ -54,6 +56,7 @@
     <button type="submit">Save Student</button>
 
 </form>
+
 
 
 
