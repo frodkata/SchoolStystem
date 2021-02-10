@@ -59,14 +59,18 @@ public class AdminController {
         Student student = new Student();
         model.addAttribute("student", student);
 
+
+
         return "admin/studentPanel/newStudent";
     }
 
 
     @PostMapping("/saveStudent")
-    public String saveStudent(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult) {
+    public String saveStudent(@Valid @ModelAttribute("student") Student student,BindingResult bindingResult) {
         //VALIDATE FORM
-        if (bindingResult.hasErrors()) {  //check if entity constraints are satisfied
+        if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
+            return "admin/studentPanel/newStudent";
+        }else if(student.getParent().getFirstName().equals("") || student.getParent().getLastName().equals("")){
             return "admin/studentPanel/newStudent";
         }else{
 

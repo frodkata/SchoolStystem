@@ -1,6 +1,7 @@
 package ElektronenDnevnik.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "parent")
