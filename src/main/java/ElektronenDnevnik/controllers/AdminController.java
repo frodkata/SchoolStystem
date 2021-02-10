@@ -266,29 +266,35 @@ public class AdminController {
 
 
     @PostMapping("/saveHeadmaster")
-    public String saveHeadmaster(@ModelAttribute("headmaster") Headmaster headmaster) {
+    public String saveHeadmaster(@Valid @ModelAttribute("headmaster") Headmaster headmaster, BindingResult bindingResult) {
 
-        //Only one headmaster can exist
-        if(headmasterService.getHeadmaster() != null){ //Check if there is an existing headmaster
-            return "redirect:/?error";
+        if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
+            return "admin/headmasterPanel/newHeadmaster";
+        }else {
+            //Only one headmaster can exist
+            if(headmasterService.getHeadmaster() != null){ //Check if there is an existing headmaster
+                return "redirect:/?error";
 
-        }else{
-            //Create new UserProfile with ROLE.HEADMASTER
-            UserProfile userProfile = new UserProfile();
-            userProfile.setUsername("H_"+headmaster.getFirstName()); //Create username
-            userProfile.setPassword("1234"); //TEST PASSWORD
-            userProfile.setRole(Role.HEADMASTER); //Add HEADMASTER role to UserProfile
-            headmaster.setUserProfile(userProfile); //Add userProfile profile to Headmaster entity
-
-
-            //Save new Headmaster to repository
-            headmasterService.saveHeadmaster(headmaster);
-            //Save new UserProfile to repository
-            userService.save(userProfile);
+            }else{
+                //Create new UserProfile with ROLE.HEADMASTER
+                UserProfile userProfile = new UserProfile();
+                userProfile.setUsername("H_"+headmaster.getFirstName()); //Create username
+                userProfile.setPassword("1234"); //TEST PASSWORD
+                userProfile.setRole(Role.HEADMASTER); //Add HEADMASTER role to UserProfile
+                headmaster.setUserProfile(userProfile); //Add userProfile profile to Headmaster entity
 
 
-            return "redirect:/";
+                //Save new Headmaster to repository
+                headmasterService.saveHeadmaster(headmaster);
+                //Save new UserProfile to repository
+                userService.save(userProfile);
+
+
+                return "redirect:/";
+            }
+
         }
+
 
 
 
