@@ -6,12 +6,14 @@ import ElektronenDnevnik.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -62,24 +64,38 @@ public class AdminController {
 
 
     @PostMapping("/saveStudent")
-    public String saveStudent(@ModelAttribute("student") Student student) {
+    public String saveStudent(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult) {
+        //VALIDATE FORM
+        if (bindingResult.hasErrors()) {  //check if entity constraints are satisfied
+            return "admin/studentPanel/newStudent";
+        }else{
 
 
-        //Create new UserProfile with ROLE.PARENT
-       UserProfile userProfile = new UserProfile();
-       userProfile.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
-       userProfile.setPassword("1234"); //TEST PASSWORD
-       userProfile.setRole(Role.PARENT); //Set role
-       student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student entity
+            //Create new UserProfile with ROLE.PARENT
+            UserProfile userProfile = new UserProfile();
+            userProfile.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
+            userProfile.setPassword(student.getEgn()); //TEST PASSWORD
+            userProfile.setRole(Role.PARENT); //Set role
+            student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student entity
 
 
-         //Save new student to repository
-        studentService.saveStudent(student);
-        //Save new userProfile to repository
-        userService.save(userProfile);
+            //Save new student to repository
+            studentService.saveStudent(student);
+            //Save new userProfile to repository
+            userService.save(userProfile);
 
-        return "redirect:/";
+            return "redirect:/";
+        }
+
+
+
     }
+
+
+
+
+
+
 
 
     @GetMapping("/viewStudents")

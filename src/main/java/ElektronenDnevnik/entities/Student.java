@@ -1,10 +1,12 @@
 package ElektronenDnevnik.entities;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "student", uniqueConstraints = @UniqueConstraint(columnNames = "egn"))
@@ -14,15 +16,18 @@ public class Student {
     private Long id;
 
     @Column(name = "first_name")
+    @NotEmpty(message = "Field cannot be left empty!")
     private String firstName;
 
     @Column(name = "last_name")
+    @NotEmpty(message = "Field cannot be left empty!")
     private String lastName;
 
     @Column(name = "absences")
     private int absences;
 
     @Column(name = "egn")
+    @Pattern(regexp="[\\d]{10}", message = "Must contain 10 digits")   //String of digits with size 10
     private String egn;
 
 

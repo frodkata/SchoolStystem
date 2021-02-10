@@ -1,44 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Grades</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Електронен дневник</h1>
-            <p>New Bulgarian University</p>
-        </div>
-        <div class="container">
-            <a th:href = "@{/teacherMenu}" role="button" class="btn btn-primary btn-lg btn-block"><i class="fas fa-chevron-left"></i> Go back</a>
-            <br>
-            <table border="1" class = "table table-striped">
-            <thead>
-                <tr>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr th:each="grades : ${gradesList}">
-                <td th:text="${grades.grade}"></td>
-                <td>
-                    <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="edit-button" data-toggle="deletetip" title="Delete grade!"><i class="fas fa-trash-alt"></i></a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-        <script>
-            $(document).ready(function(){
-              $('[data-toggle="deletetip"]').tooltip();
-            });
-        </script>
-    </body>
+<table border="1" class = "students-table">
+    <thead>
+    <tr>
+        grade
+    </tr>
+
+    </thead>
+
+    <tbody>
+    <tr th:each="grades : ${gradesList}">
+        <td th:text="${grades.grade}"></td>
+        <td>
+            <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="edit-button" > X </a>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
 </html>

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Changed access to /registration to &quot;ADMIN&quot; only">
+    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Added Student data validation">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ElektronenDnevnik/controllers/AdminControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/entities/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
@@ -18,7 +28,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/headmaster/headmasterMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/headmaster/headmasterMenu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parent/parentMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parent/parentMenu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/markAbsent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/markAbsent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/newGrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/newGrade.html" afterDir="false" />
@@ -56,13 +65,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/parent" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ElektronenDnevnik.services" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="ElektronenDnevnik" />
     </key>
@@ -73,21 +80,25 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ElektronenDnevnik.entities" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\java\ElektronenDnevnik\services" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\java\ElektronenDnevnik" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\teacher" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\parent" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\headmaster" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin\teacherPanel" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin\studentPanel" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ElektronenDnevnik.entities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\parent" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\teacher" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\java\ElektronenDnevnik\services" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ElektronenDnevnik.services" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -116,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminControllerTest.deleteStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElektronenDnevnik" />
       <extension name="coverage">
         <pattern>
@@ -126,22 +137,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
       <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminControllerTest.index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ElektronenDnevnik" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ElektronenDnevnik.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
-      <option name="METHOD_NAME" value="index" />
+      <option name="METHOD_NAME" value="deleteStudent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminControllerTest.showNewStudentForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminControllerTest.showFormForUpdateStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElektronenDnevnik" />
       <extension name="coverage">
         <pattern>
@@ -173,7 +169,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
       <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
-      <option name="METHOD_NAME" value="showNewStudentForm" />
+      <option name="METHOD_NAME" value="showFormForUpdateStudent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminControllerTest.viewStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ElektronenDnevnik" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ElektronenDnevnik.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ElektronenDnevnik.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ElektronenDnevnik.controllers.AdminControllerTest" />
+      <option name="METHOD_NAME" value="viewStudents" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,10 +194,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.AdminControllerTest.showFormForUpdateStudent" />
+        <item itemvalue="JUnit.AdminControllerTest.deleteStudent" />
+        <item itemvalue="JUnit.AdminControllerTest.viewStudents" />
         <item itemvalue="JUnit.AdminControllerTest.saveStudent" />
-        <item itemvalue="JUnit.AdminControllerTest.showNewStudentForm" />
-        <item itemvalue="JUnit.AdminControllerTest.index" />
-        <item itemvalue="JUnit.AdminControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612481343180</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Removed Bootstrap">
+      <created>1612792168099</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612792168099</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -252,6 +271,7 @@
     <MESSAGE value="Fixed form sending NULL EGN" />
     <MESSAGE value="Changed access to /registration to &quot;ADMIN&quot; only" />
     <MESSAGE value="Added Bootstrap to views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Bootstrap to views" />
+    <MESSAGE value="Removed Bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Bootstrap" />
   </component>
 </project>
