@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/updateStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/updateStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/updateStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/updateStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <list id="3b857670-1d2c-465f-9feb-c8915a8a91ec" name="Revert &quot;Regex ot Student name: Only accept latin letters&quot;" comment="Revert &quot;Regex ot Student name: Only accept latin letters&quot;&#10;&#10;This reverts commit be873f2b">
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" afterDir="false" />
@@ -38,18 +32,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html">
-      <ranges>
-        <range start1="24" end1="25" start2="24" end2="25" changelist="9653092e-403f-49a6-bbb4-264771326a7c" />
-        <range start1="27" end1="28" start2="27" end2="28" changelist="9653092e-403f-49a6-bbb4-264771326a7c" />
-        <range start1="46" end1="47" start2="46" end2="46" changelist="3b857670-1d2c-465f-9feb-c8915a8a91ec" />
-        <range start1="50" end1="51" start2="49" end2="49" changelist="3b857670-1d2c-465f-9feb-c8915a8a91ec" />
-        <range start1="53" end1="54" start2="51" end2="52" changelist="9653092e-403f-49a6-bbb4-264771326a7c" />
-        <range start1="61" end1="62" start2="59" end2="59" changelist="3b857670-1d2c-465f-9feb-c8915a8a91ec" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1mNSHl3QopvpekuUhpWYXf75wWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -247,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612966554381</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed issue with Update methods and validation">
+      <created>1612967329176</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612967329176</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -281,6 +270,7 @@
     <MESSAGE value="Removed Bootstrap" />
     <MESSAGE value="Validate Teacher data" />
     <MESSAGE value="Validate Headmaster data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validate Headmaster data" />
+    <MESSAGE value="Fixed issue with Update methods and validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with Update methods and validation" />
   </component>
 </project>
