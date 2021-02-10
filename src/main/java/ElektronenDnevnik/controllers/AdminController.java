@@ -156,10 +156,14 @@ public class AdminController {
 
     //save updated Teacher without changing UserProfile
     @PostMapping("/updateStudent")
-    public String updateStudent(@ModelAttribute("student") Student student) {
-        studentService.saveStudent(student);
-
-        return "redirect:/?success";
+    public String updateStudent(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult) {
+        //VALIDATE
+        if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
+            return "admin/studentPanel/updateStudent";
+        }else {
+            studentService.saveStudent(student);
+            return "redirect:/?success";
+        }
     }
 
 
@@ -244,12 +248,16 @@ public class AdminController {
 
     //save updated Teacher without changing UserProfile
     @PostMapping("/updateTeacher")
-    public String updateTeacher(@ModelAttribute("teacher") Teacher teacher) {
-
+    public String updateTeacher(@Valid @ModelAttribute("teacher") Teacher teacher, BindingResult bindingResult) {
+    if(bindingResult.hasErrors()){
+        return "admin/teacherPanel/updateTeacher";
+    }else{
         teacherService.saveTeacher(teacher);
 
 
         return "redirect:/?success";
+    }
+
     }
 
 
@@ -343,10 +351,14 @@ public class AdminController {
 
     //save updated Headmaster without changing UserProfile
     @PostMapping("/updateHeadmaster")
-    public String updateHeadmaster(@ModelAttribute("headmaster") Headmaster headmaster) {
-        headmasterService.saveHeadmaster(headmaster);
+    public String updateHeadmaster(@Valid @ModelAttribute("headmaster") Headmaster headmaster, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()){
+            return "admin/headmasterPanel/updateHeadmaster";
+        }   else {
+            headmasterService.saveHeadmaster(headmaster);
+            return "redirect:/?success";
+        }
 
-        return "redirect:/?success";
     }
 
 

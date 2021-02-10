@@ -11,7 +11,11 @@
     <input type="hidden" th:field="*{parent}" />
 
     <input type="text" th:field=="${student.firstName}" name="name" placeholder="student first name"/>
+    <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+
     <input type="text" th:field=="${student.lastName}" name="name" placeholder="student last name"/>
+    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+
 
     <select th:field=="${student.year}" >
         <option value="1">1</option>
@@ -32,6 +36,8 @@
     <input type="text" th:field=="${student.parent.lastName}" name="name" placeholder="parent last name"/>
 
     <input type="text" th:field=="${student.egn}" name="name" placeholder="EGN"/>
+    <span th:if="${#fields.hasErrors('egn')}" th:errors="*{egn}"></span>
+
 
     <button type="submit">Update Student</button>
 
