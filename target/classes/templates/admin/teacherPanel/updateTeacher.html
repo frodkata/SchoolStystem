@@ -10,10 +10,10 @@
     <input type="hidden" th:field="*{userProfile}" />
 
 
-    <input type="text" th:field=="${teacher.firstName}" name="name" placeholder="teacher first name"/>
+    <input type="text" th:field=="${teacher.firstName}" name="firstName" placeholder="teacher first name"/>
     <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
 
-    <input type="text" th:field=="${teacher.lastName}" name="name" placeholder="teacher last name"/>
+    <input type="text" th:field=="${teacher.lastName}" name="lastName" placeholder="teacher last name"/>
     <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
 
 
