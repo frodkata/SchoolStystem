@@ -61,6 +61,7 @@ public class AdminController {
 
 
 
+
         return "admin/studentPanel/newStudent";
     }
 
@@ -70,7 +71,10 @@ public class AdminController {
         //VALIDATE FORM
         if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
             return "admin/studentPanel/newStudent";
-        }else if(student.getParent().getFirstName().equals("") || student.getParent().getLastName().equals("")){
+        }
+        //As Parent is created by creating Student, i couldn't place @Valid to validate parent model, as there is no parent model,
+        //so validation on parent fields is done manually here
+        else if(student.getParent().getFirstName().equals("") || student.getParent().getLastName().equals("")){
             return "admin/studentPanel/newStudent";
         }else{
 
@@ -78,7 +82,7 @@ public class AdminController {
             //Create new UserProfile with ROLE.PARENT
             UserProfile userProfile = new UserProfile();
             userProfile.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
-            userProfile.setPassword(student.getEgn()); //TEST PASSWORD
+            userProfile.setPassword(student.getEgn());
             userProfile.setRole(Role.PARENT); //Set role
             student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student entity
 
@@ -174,25 +178,29 @@ public class AdminController {
 
 
     @PostMapping("/saveTeacher")
-    public String saveTeacher(@ModelAttribute("teacher") Teacher teacher) {
+    public String saveTeacher(@Valid @ModelAttribute("teacher") Teacher teacher,BindingResult bindingResult) {
+        if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
+            return "admin/teacherPanel/newTeacher";
+        }else{
 
 
-
-        //Create new UserProfile with ROLE.TEACHER
-        UserProfile userProfile = new UserProfile();
-        userProfile.setUsername("T_"+userService.randomStringForUsername()); //Create username
-        userProfile.setPassword("1234"); //TEST PASSWORD
-        userProfile.setRole(Role.TEACHER); //Add TEACHER role to UserProfile
-        teacher.setUserProfile(userProfile); //Add userProfile profile to Teacher entity
-
-
-        //Save new Teacher to repository
-        teacherService.saveTeacher(teacher);
-        //Save new UserProfile to repository
-        userService.save(userProfile);
+            //Create new UserProfile with ROLE.TEACHER
+            UserProfile userProfile = new UserProfile();
+            userProfile.setUsername("T_"+userService.randomStringForUsername()); //Create username
+            userProfile.setPassword("1234"); //TEST PASSWORD
+            userProfile.setRole(Role.TEACHER); //Add TEACHER role to UserProfile
+            teacher.setUserProfile(userProfile); //Add userProfile profile to Teacher entity
 
 
-        return "redirect:/";
+            //Save new Teacher to repository
+            teacherService.saveTeacher(teacher);
+            //Save new UserProfile to repository
+            userService.save(userProfile);
+
+
+            return "redirect:/";
+        }
+
     }
 
 

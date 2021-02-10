@@ -1,6 +1,8 @@
 package ElektronenDnevnik.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "teacher")
@@ -10,9 +12,13 @@ public class Teacher {
     private Long id;
 
     @Column(name = "first_name")
+    @NotEmpty(message = "Field cannot be left empty!")
+    @Pattern(regexp="[A-Za-z]+$", message = "Must contain only latin letters!")
     private String firstName;
 
     @Column(name = "last_name")
+    @NotEmpty(message = "Field cannot be left empty!")
+    @Pattern(regexp="[A-Za-z]+$", message = "Must contain only latin letters!")
     private String lastName;
 
 

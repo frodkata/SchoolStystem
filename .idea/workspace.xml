@@ -4,7 +4,11 @@
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Headmaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Headmaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Teacher.java" afterDir="false" />
+    </list>
+    <list id="3b857670-1d2c-465f-9feb-c8915a8a91ec" name="Revert &quot;Regex ot Student name: Only accept latin letters&quot;" comment="Revert &quot;Regex ot Student name: Only accept latin letters&quot;&#10;&#10;This reverts commit be873f2b">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/AdminController.class" afterDir="false" />
@@ -34,6 +38,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="11" changelist="9653092e-403f-49a6-bbb4-264771326a7c" />
+        <range start1="36" end1="36" start2="40" end2="50" changelist="9653092e-403f-49a6-bbb4-264771326a7c" />
+        <range start1="219" end1="227" start2="233" end2="234" changelist="3b857670-1d2c-465f-9feb-c8915a8a91ec" />
+        <range start1="258" end1="260" start2="265" end2="266" changelist="3b857670-1d2c-465f-9feb-c8915a8a91ec" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="1mNSHl3QopvpekuUhpWYXf75wWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
