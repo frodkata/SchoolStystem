@@ -39,7 +39,7 @@ public class TeacherController {
     @GetMapping("/teacherMenu")
     public String teacherMenu(Model model){
 
-        //get current logged teacher year
+        //get current logged teacher and the Year which he is tutoring
         int year = teacherService.getTeacherByUserId(userService.getCurrentUser().getId()).getYear();
         List<Student> studentList =  studentService.getStudentsByYear(year);
 

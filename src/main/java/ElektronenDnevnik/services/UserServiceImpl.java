@@ -81,6 +81,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public String randomStringForUsername(){
+		//Generate random string for unique username
 		String randomString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		StringBuilder salt = new StringBuilder();
 		Random rnd = new Random();
@@ -88,8 +89,14 @@ public class UserServiceImpl implements UserService{
 			int index = (int) (rnd.nextFloat() * randomString.length());
 			salt.append(randomString.charAt(index));
 		}
-		String saltStr = salt.toString();
-		return saltStr;
+		return salt.toString();
+	}
+
+	@Override
+	public void changePassword(UserProfile userProfile, String password) {
+		UserProfile user = userRepository.findByUsername(userProfile.getUsername());
+		user.setPassword(password);
+		save(user);
 	}
 
 }

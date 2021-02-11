@@ -10,6 +10,6 @@ public interface UserService extends UserDetailsService{
 	UserProfile getCurrentUser();
 	void deleteUserById(Long id);
 	String randomStringForUsername();
-
+	void changePassword(UserProfile userProfile, String password);
 
 }
