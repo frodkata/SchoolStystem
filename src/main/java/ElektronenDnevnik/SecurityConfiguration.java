@@ -50,9 +50,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		//https://stackoverflow.com/questions/33673300/spring-security-java-configuration-for-authenticated-users-with-a-role
-		http.authorizeRequests().antMatchers( "/", "/showNewStudentForm", "/saveStudent" , "/viewStudents" , "/showNewTeacherForm" , "/saveTeacher" , "/viewTeachers" , "/saveParent", "/registration").hasRole("ADMIN")
+		http.authorizeRequests().antMatchers( "/", "/showNewStudentForm", "/saveStudent" , "/viewStudents" , "/deleteStudent/{id}", "/showFormForUpdateStudent/{id}", "/updateStudent", "/showNewTeacherForm" , "/saveTeacher" , "/viewTeachers" , "/deleteTeacher/{id}", "/showFormForUpdateTeacher/{id}", "/updateTeacher", "/showNewHeadmasterForm", "/saveHeadmaster" , "/viewHeadmaster", "/deleteHeadmaster", "/showFormForUpdateHeadmaster", "/updateHeadmaster", "/registration").hasRole("ADMIN")
 				.antMatchers( "/parentMenu").hasRole("PARENT")
-				.antMatchers( "/teacherMenu").hasRole("TEACHER")
+				.antMatchers( "/teacherMenu" , "/showMarkAbsentForm/{id}" , "/markAbsent" , "/showNewGradeForm/{id}" , "/saveGrade" , "/viewGrades/{id" , "/deleteGrade/{id}").hasRole("TEACHER")
+				.antMatchers( "/headmasterMenu").hasRole("HEADMASTER")
 				.anyRequest().authenticated()
 		.and()
 		.formLogin()
