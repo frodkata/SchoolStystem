@@ -3,46 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Student</title>
+    <link rel="stylesheet" th:href="@{../../css/panel.css}" />
+
 </head>
 <body>
-<form th:action="@{/updateStudent}" method="post" th:object="${student}" >
+    <div class="navbar">
+        <a th:href = "@{/}" class="primary-button">🏠 Home </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Admin</span>
+      </div>
 
-    <input type="hidden" th:field="*{id}" />
-    <input type="hidden" th:field="*{parent}" />
+      <div class="container"> 
+          <h3>Update Student</h3>
+        <form th:action="@{/updateStudent}" method="post" th:object="${student}" >
 
-    <input type="text" th:field=="${student.firstName}" name="name" placeholder="student first name"/>
-    <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+            <input type="hidden" th:field="*{id}" />
+            <input type="hidden" th:field="*{parent}" />
+            <div class="form-group">
+                <input type="text" th:field=="${student.firstName}" name="name" placeholder="student first name"/>
+                <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+            
+                <input type="text" th:field=="${student.lastName}" name="name" placeholder="student last name"/>
+                <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+            
+            </div>
+            
+            <div class="form-group"> 
+                   <select th:field=="${student.year}" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
 
-    <input type="text" th:field=="${student.lastName}" name="name" placeholder="student last name"/>
-    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+            <input type="text" th:field=="${student.egn}" name="name" placeholder="EGN"/>
+                <span th:if="${#fields.hasErrors('egn')}" th:errors="*{egn}"></span>
+            </div>
+            <h5>Parent information</h5>
+            <div class="form-group"> 
+                <input type="text" th:field=="${student.parent.firstName}" name="name" placeholder="parent first name"/>
+                <input type="text" th:field=="${student.parent.lastName}" name="name" placeholder="parent last name"/>
+        
+            </div>
+            
+            <h5>Parent Email: </h5>         
+            <div class="form-group"> 
+                <input type="text" th:field=="${student.parent.email}" name="email" placeholder="Parent Email"/>
+            </div>   
+            
+            
+        
+        
+            <input type="submit" class="submit" value="Submit" />   
+        
+        </form>
 
 
-    <select th:field=="${student.year}" >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
+      </div>
 
-    <input type="text" th:field=="${student.parent.firstName}" name="name" placeholder="parent first name"/>
-    <input type="text" th:field=="${student.parent.lastName}" name="name" placeholder="parent last name"/>
-
-    <input type="text" th:field=="${student.egn}" name="name" placeholder="EGN"/>
-    <span th:if="${#fields.hasErrors('egn')}" th:errors="*{egn}"></span>
-
-    <input type="text" th:field=="${student.parent.email}" name="email" placeholder="Parent Email"/>
-
-    <button type="submit">Update Student</button>
-
-</form>
 
 </body>
 </html>

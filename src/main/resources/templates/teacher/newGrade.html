@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>New Grade</title>
+    <link rel="stylesheet" th:href="@{../css/panel.css}" />
+
 </head>
 <body>
+    
+    <div class="navbar">
+    <a th:href = "@{/teacherMenu}" class="primary-button">⬅️ Back</a> 
+    <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+    <span>Teacher</span>
+  </div>
 
-<form th:action="@{/saveGrade}" method="post" th:object="${grades}" >
-
-
-    <input type="hidden" th:field="*{id}" />
-    <input type="hidden" th:field="*{student.id}" />
-
-
-    <h1>Add Grade</h1>
-
-        <select th:field="*{grade}" >
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
+<div class="container">
+    <form th:action="@{/saveGrade}" method="post" th:object="${grades}" >
 
 
-
-
-
-    <button type="submit" class="submit">Save</button>
-
-
-
-
-
-
-</form>
+        <input type="hidden" th:field="*{id}" />
+        <input type="hidden" th:field="*{student.id}" />
+    
+    
+        <h1>Add Grade</h1>
+    
+            <select th:field="*{grade}" >
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+    
+    
+    
+    
+    
+        <button type="submit" class="submit">Save</button>
+    
+    
+    
+    
+    
+    
+    </form>
+    
+</div>
 
 </body>
 </html>

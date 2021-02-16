@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Teacher panel</title>
+    <link rel="stylesheet" th:href="@{../css/panel.css}" />
+
 </head>
 <body>
+    <div class="navbar">
+        <a th:href = "@{/showChangePasswordForm}" class="primary-button">🗝️ Change password</a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Teacher</span>
+      </div>
 
-<table border="1" class = "students-table">
-
-
-
-    <thead>
-    <tr>
-        <th> Student </th>
-
-    </tr>
-
-    </thead>
+    <div class="container"> 
+        <table border="1" >
 
 
 
-    <tbody>
-    <tr th:each="student : ${studentList}" >
-        <td th:text="${student.firstName}"></td>
-        <td>
-            <a th:href="@{/showMarkAbsentForm/{id}(id=${student.id})}" class="edit-button" > Mark Absent </a> |
-            <a th:href="@{/showNewGradeForm/{id}(id=${student.id})}" class="edit-button" > New Grade </a> |
-            <a th:href="@{/viewGrades/{id}(id=${student.id})}" class="edit-button" > View Grades </a> |
+            <thead>
+            <tr>
+                <th> Student </th>
+        
+            </tr>
+        
+            </thead>
+        
+        
+        
+            <tbody>
+            <tr th:each="student : ${studentList}" >
+                <td th:text="${student.firstName}"></td>
+                <td>
+                    <a th:href="@{/showMarkAbsentForm/{id}(id=${student.id})}" class="edit-button" > Mark Absent 📅</a> 
+                    <a th:href="@{/showNewGradeForm/{id}(id=${student.id})}" class="edit-button" > New Grade 📝 </a> 
+                    <a th:href="@{/viewGrades/{id}(id=${student.id})}" class="edit-button" > View Grades 🔢 </a> 
+        
+        
+                </td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </div>
 
 
-        </td>
-    </tr>
 
-    </tbody>
-</table>
-
-<a th:href = "@{/showChangePasswordForm}" class="primary-button"> Change password</a> |
-<a th:href = "@{/logout}" class="primary-button"> Logout </a>
 
 
 </body>

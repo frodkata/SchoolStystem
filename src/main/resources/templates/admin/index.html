@@ -2,64 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Admin</title>
+    <link rel="stylesheet" th:href="@{../css/panel.css}" />
+
 </head>
 <body>
 
-<div th:if="${param.success}">
-    <div class="alert-danger">Operation successful!</div>
+    <div class="navbar">
+        <a th:href = "@{/registration}" class="primary-button">&#128110 Add another Admin </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+            <div class="dropdown">
+                <button class="dropbtn">📝 Add new.. 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a th:href = "@{/showNewStudentForm}" class="primary-button">👨‍🎓 New Student </a>   
+                <a th:href = "@{/showNewTeacherForm}" class="primary-button">👨‍🏫 New Teacher </a>
+                <a th:href = "@{/showNewHeadmasterForm}" class="primary-button">🤵 New Headmaster </a>
+            </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">📖 View.. 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a th:href = "@{/viewStudents}" class="primary-button">👨‍🎓 View Students </a>
+                <a th:href = "@{/viewTeachers}" class="primary-button">👨‍🏫 View Teachers </a>
+                <a th:href = "@{/viewHeadmaster}" class="primary-button">🤵 View Headmaster </a>
+            </div>
+            </div> 
+
+            <span>Admin</span>
+      </div>
+
+
+<div class="container">
+    <div th:if="${param.success}">
+        <div class="alert-success">Operation successful!</div>
+    </div>
+
+
+    <div th:if="${param.error}">
+        <div class="alert-danger">A headmaster already exists!</div>
+    </div>
+
+    <h1>Welcome to the Admin Panel!</h1>
+   <span>Manage School Personnel here</span>
 </div>
-
-
-<div th:if="${param.error}">
-    <div class="alert-danger">A headmaster already exists!</div>
-</div>
-<p>
-
-<p>
-
-
-<table border="1" class = "students-table">
-
-
-
-    <thead>
-    <tr>
-        <th> Student </th>
-        <th> Teacher</th>
-        <th> Headmaster</th>
-    </tr>
-
-    </thead>
-
-
-
-    <tbody>
-    <tr>
-        <td ><a th:href = "@{/showNewStudentForm}" class="primary-button"> New Student </a>
-            <br>
-            <a th:href = "@{/viewStudents}" class="primary-button"> View Students </a>
-
-        </td>
-        <td><a th:href = "@{/showNewTeacherForm}" class="primary-button"> New Teacher </a>
-            <br>
-            <a th:href = "@{/viewTeachers}" class="primary-button"> View Teachers </a>
-            <br>
-
-        </td>
-        <td><a th:href = "@{/showNewHeadmasterForm}" class="primary-button"> New Headmaster </a>
-            <br>
-            <a th:href = "@{/viewHeadmaster}" class="primary-button"> View Headmaster </a>
-            <br>
-
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-<a th:href = "@{/registration}" class="primary-button"> Add another Admin </a> |
-
-<a th:href = "@{/logout}" class="primary-button"> Logout </a>
+    
+    
+  
 
 
 </body>

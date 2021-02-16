@@ -3,76 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <title>Headmaster Menu</title>
+    <link rel="stylesheet" th:href="@{../css/panel.css}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+         $("#openTeachers").click(function(){
+             $("#teachers").toggle("slow");
+             $("#students").hide("slow");
+
+         });
+        });
+
+        $(document).ready(function(){
+         $("#openStudents").click(function(){
+             $("#students").toggle("slow");
+             $("#teachers").hide("slow");
+         });
+        });
+
+        </script>
 </head>
 <body>
-<h1>TEACHERS</h1>
+    <div class="navbar">
+        <a th:href = "@{/showChangePasswordForm}" class="primary-button">🗝️ Change password</a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Headmaster</span>
+      </div>
 
-<table border="1" class = "students-table">
+    <div class="container"> 
+         <div class="options">
+            <span id="openTeachers">TEACHERS👨‍🏫</span> <br>
+            <div id="teachers">
+                  <table border="1" class = "students-table">
+              
+              
+              
+                  <thead>
+                  <tr>
+                      <th> Teacher </th>
+                      <th> Course </th>
+                      <th> Year </th>
+              
+                  </tr>
+              
+                  </thead>
+              
+              
+              
+                  <tbody>
+                  <tr th:each="teacher : ${teacherList}">
+                      <td th:text="${teacher.firstName}"></td>
+                      <td th:text="${teacher.course}"></td>
+                      <td th:text="${teacher.year}"></td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+            <span id="openStudents">STUDENTS👨‍🎓</span>
+            <div id="students">
+              
+  
+              <table border="1" class = "students-table" >
+                  <thead>
+                  <tr>
+                      <th> Student </th>
+                      <th></th>
+                      <th> Year </th>
+                      <th> Parent </th>
+                      <th></th>
+                      <th>EGN</th>
+              
+              
+                  </tr>
+              
+                  </thead>
+              
+              
+              
+                  <tbody>
+                  <tr th:each="student : ${studentList}">
+                      <td th:text="${student.firstName}"></td>
+                      <td th:text="${student.lastName}"></td>
+              
+                      <td th:text="${student.year}"></td>
+              
+                      <td th:text="${student.parent.firstName}"></td>
+                      <td th:text="${student.parent.lastName}"></td>
+              
+                      <td th:text="${student.egn}"></td>
+              
+              
+              
+              
+                  </tr>
+                  </tbody>
+              </table>
+              
+            </div>
+         </div>
+        
 
-
-
-    <thead>
-    <tr>
-        <th> Teacher </th>
-        <th> Course </th>
-        <th> Year </th>
-
-    </tr>
-
-    </thead>
-
-
-
-    <tbody>
-    <tr th:each="teacher : ${teacherList}">
-        <td th:text="${teacher.firstName}"></td>
-        <td th:text="${teacher.course}"></td>
-        <td th:text="${teacher.year}"></td>
-    </tr>
-    </tbody>
-</table>
-
-<h1>STUDENTS</h1>
-
-<table border="1" class = "students-table" >
-    <thead>
-    <tr>
-        <th> Student </th>
-        <th></th>
-        <th> Year </th>
-        <th> Parent </th>
-        <th></th>
-        <th>EGN</th>
-
-
-    </tr>
-
-    </thead>
-
-
-
-    <tbody>
-    <tr th:each="student : ${studentList}">
-        <td th:text="${student.firstName}"></td>
-        <td th:text="${student.lastName}"></td>
-
-        <td th:text="${student.year}"></td>
-
-        <td th:text="${student.parent.firstName}"></td>
-        <td th:text="${student.parent.lastName}"></td>
-
-        <td th:text="${student.egn}"></td>
-
-
-
-
-    </tr>
-    </tbody>
-</table>
-
-<a th:href = "@{/showChangePasswordForm}" class="primary-button"> Change password</a> |
-<a th:href = "@{/logout}" class="primary-button"> Logout </a>
-
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,279 @@
+body {
+    
+    margin: 0;
+    background-color: #040404;
+   color: white;
+
+   
+   font-family: 'Roboto', sans-serif;  
+    font-weight: bold;
+
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #111;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+  }
+  
+  .navbar span{
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /*Content Container*/
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* .container forms */
+
+  form {
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  h5{
+    text-align: center;
+  }
+ 
+  form span{
+    font-size: 70%;
+  }
+  input {
+    background: rgb(7, 6, 6);
+    color: white;
+    text-align: center; 
+
+    transition: all 200ms ease;
+    border-left: 0 solid transparent;
+    border: 0;
+    height: 1.8rem;
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+  }
+
+  ::-webkit-input-placeholder{
+    text-align: center;
+  }
+
+  .form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  /* Select box */
+  select{
+    background-color: #01111f9f;
+    color: rgba(255, 255, 255, 0.575);
+    padding: 4px;
+ 
+    border: none;
+    font-size: 14px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+
+  select option{
+    background-color: #7a07079d;
+    border: #040404;
+
+  }
+      /*Buttons*/
+      .submit{
+        display:inline-block; 
+        padding:0.7em 1.4em; 
+        margin:0 0.3em 0.3em 0;
+         border-radius:0.15em; 
+         box-sizing: border-box; 
+         text-decoration:none; 
+         font-family:'Roboto',sans-serif;
+          text-transform:uppercase; 
+          font-weight:400; color:#FFFFFF; 
+          background-color:#000000a6;
+         box-shadow:inset 0 -0.6em 0 -0.35em rgba(209, 16, 16, 0.075); 
+         text-align:center; position:relative;
+    }
+    
+    .submit:hover {
+        background-color:#ff33338e;
+    }
+
+    /* .container tables */
+    
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  
+}
+
+table thead tr {
+  background-color: #040404;
+  color: #ffffff;
+  text-align: left;
+  border-top: 2px solid #040404 ;
+}
+
+ th,
+td {
+  padding: 12px 15px;
+  border-left: 2px solid #040404;
+  border-right: 2px solid #040404;
+
+
+}
+
+table tbody tr {
+  border-bottom: 1px solid #7a07079d;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #7a07079d;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #040404;
+}
+
+table tbody tr.active-row {
+  font-weight: bold;
+  color: #040404;
+}
+
+table a:hover{
+  color: rgba(206, 206, 206, 0.507);
+  cursor: pointer;
+}
+
+  /*Panel Jquery*/
+    #teachers, #students, #grades, #absences{
+      display:none;   
+    }
+
+   
+
+    .options span{
+      font-size: 200%;
+    }
+
+    .options span:hover{
+      color: rgba(206, 206, 206, 0.507);
+      cursor: pointer;
+
+    }
+
+    .polaroid {
+      text-align: center;
+      background-color: white;
+      color: black;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 5.2), 0 6px 20px 0 rgba(0, 0, 0, 4.19);
+      margin: 25px;
+      padding: 1%;
+      }
+
+    
+  
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+   
+
+
+    
+  /*Alerts*/
+  .alert-danger{
+    background-color: #7a07079d;
+   color: white;
+   transition: all 200ms ease;
+   box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+   padding: 10px;
+  }
+
+  .alert-success{
+    
+      background-color: #0b7a07c5;
+     color: white;
+     transition: all 200ms ease;
+     box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+     padding: 10px;
+    
+  
+  }
+

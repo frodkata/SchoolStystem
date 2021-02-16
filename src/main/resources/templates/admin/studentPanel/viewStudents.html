@@ -3,54 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>View Students</title>
+    <link rel="stylesheet" th:href="@{../../css/panel.css}" />
+
 </head>
 <body>
+    <div class="navbar">
+        <a th:href = "@{/}" class="primary-button">🏠 Home </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Admin</span>
+      </div>
+
+      <div class="container"> 
+        <table border="1" class = "students-table" >
+            <thead>
+            <tr>
+                <th> Student </th>
+                <th></th>
+                <th> Year </th>
+                <th> Parent </th>
+                <th></th>
+                <th>EGN</th>
+                <th>Username</th>
+                <th>Parent Email</th>
+            </tr>
+        
+            </thead>
+        
+        
+        
+            <tbody>
+            <tr th:each="student : ${studentList}">
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+        
+                <td th:text="${student.year}"></td>
+        
+                <td th:text="${student.parent.firstName}"></td>
+                <td th:text="${student.parent.lastName}"></td>
+        
+                <td th:text="${student.egn}"></td>
+                <td th:text="${student.parent.userProfile.username}"></td>
+                <td th:text="${student.parent.email}"></td>
+        
+        
+        
+        
+                <td> <a th:href="@{/deleteStudent/{id}(id=${student.id})}" class="edit-button" >  Delete 🗑️ </a> |
+                    <a th:href="@{/showFormForUpdateStudent/{id}(id=${student.id})}" class="edit-button" > Update 📝 </a>
+        
+                </td>
+        
+        
+        
+            </tr>
+            </tbody>
+            </table>
+      </div>
 
 
-
-<table border="1" class = "students-table" >
-    <thead>
-    <tr>
-        <th> Student </th>
-        <th></th>
-        <th> Year </th>
-        <th> Parent </th>
-        <th></th>
-        <th>EGN</th>
-        <th>Username</th>
-        <th>Parent Email</th>
-    </tr>
-
-    </thead>
-
-
-
-    <tbody>
-    <tr th:each="student : ${studentList}">
-        <td th:text="${student.firstName}"></td>
-        <td th:text="${student.lastName}"></td>
-
-        <td th:text="${student.year}"></td>
-
-        <td th:text="${student.parent.firstName}"></td>
-        <td th:text="${student.parent.lastName}"></td>
-
-        <td th:text="${student.egn}"></td>
-        <td th:text="${student.parent.userProfile.username}"></td>
-        <td th:text="${student.parent.email}"></td>
-
-
-
-
-        <td> <a th:href="@{/deleteStudent/{id}(id=${student.id})}" class="edit-button" > X </a> |
-            <a th:href="@{/showFormForUpdateStudent/{id}(id=${student.id})}" class="edit-button" > Update </a>
-
-        </td>
-
-
-
-    </tr>
-    </tbody>
-    </table>
 </body>
 </html>

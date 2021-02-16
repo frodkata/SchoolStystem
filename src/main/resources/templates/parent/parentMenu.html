@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Parent Panel</title>
+    <link rel="stylesheet" th:href="@{../css/panel.css}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+         $("#openGrades").click(function(){
+             $("#grades").toggle("slow");
+             $("#absences").hide("slow");
+
+         });
+        });
+
+        $(document).ready(function(){
+         $("#openAbsences").click(function(){
+             $("#absences").toggle("slow");
+             $("#grades").hide("slow");
+  
+
+         });
+        });
+        </script>
+
+    
 </head>
 <body>
+    <div class="navbar">
+        <a th:href = "@{/showChangePasswordForm}" class="primary-button">🗝️ Change password</a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Parent</span>
+      </div>
 
+    <div class="container"> 
+        
+        
+        <div class="polaroid">
+            <h1>🎓</h1>
+            <h1 th:text="${parent.student.firstName}">First Name</h1>
+            <h1 th:text="${parent.student.lastName}">Last Name</h1>
+            <span class="title">Year</span>
+            <span th:text="${parent.student.year}">...</span> <br>
 
-        <table border="1" class = "table table-bordered shadow border rounded-lg">
+            <span class="title">EGN</span>
+            <span th:text="${parent.student.egn}">...</span> <br>
+
+            <div class="options" style=" 
+                    margin: 5%; 
+                    background-color: black; 
+                    color: white;">
+                    
+                <span id="openGrades">Grades</span> 
+                <span id="openAbsences">Absences</span>
+            </div>
+          </div>
+      
+
+        <!---
+     
+        <table border="1" >
             <thead>
             <tr>
                 <th>First name</th>
@@ -27,21 +79,33 @@
             </tr>
             </tbody>
         </table>
+   -->
+                <div id="grades">
+                    <table border="1" class="table table-striped">
+                        <thead>
+                            <th th:each="grades : ${parent.student.grades}" th:text="${grades.course}"> Grade </th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td  th:each="grades : ${parent.student.grades}" th:text="${grades.grade}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div id="absences">
+                    Absences: <span th:text="${parent.student.absences}"> 12</span>
+                </div>
+   
+        
 
-        <br>
-        <h3>Grades</h3>
-        <table border="1" class="table table-striped">
-            <thead>
-                <th th:each="grades : ${parent.student.grades}" th:text="${grades.course}"> Grade </th>
-            </thead>
-            <tbody>
-            <tr>
-                <td  th:each="grades : ${parent.student.grades}" th:text="${grades.grade}"></td>
-            </tr>
-            </tbody>
-        </table>
-        <a th:href = "@{/showChangePasswordForm}" class="primary-button"> Change password</a> |
-        <a th:href = "@{/logout}" class="primary-button"> Logout </a>
+    </div>
+
+      
+
+      
+      
+      
 
 </body>
 </html>

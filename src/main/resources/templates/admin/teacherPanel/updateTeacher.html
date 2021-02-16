@@ -3,46 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Teacher</title>
+    <link rel="stylesheet" th:href="@{../../css/panel.css}" />
+
 </head>
 <body>
-<form th:action="@{/updateTeacher}" method="post" th:object="${teacher}">
-    <input type="hidden" th:field="*{id}" />
-    <input type="hidden" th:field="*{userProfile}" />
 
 
-    <input type="text" th:field=="${teacher.firstName}" name="firstName" placeholder="teacher first name"/>
-    <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+    <div class="navbar">
+        <a th:href = "@{/}" class="primary-button">🏠 Home </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Admin</span>
+      </div>
 
-    <input type="text" th:field=="${teacher.lastName}" name="lastName" placeholder="teacher last name"/>
-    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+      <div class="container"> 
+        <h3>Update Teacher</h3>
+          <form th:action="@{/updateTeacher}" method="post" th:object="${teacher}">
+            <input type="hidden" th:field="*{id}" />
+            <input type="hidden" th:field="*{userProfile}" />
+            <div class="form-group"> 
+            <input type="text" th:field=="${teacher.firstName}" name="firstName" placeholder="teacher first name"/>
+            <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+        
+            <input type="text" th:field=="${teacher.lastName}" name="lastName" placeholder="teacher last name"/>
+            <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+        
+        
+            </div>
+        
+            <div class="form-group"> 
+            <select th:field=="${teacher.course}">
+                <option th:each="course : ${T(ElektronenDnevnik.entities.Course).values()}"
+                        th:value="${course}"
+                        th:text="${course}">
+                </option>
+            </select>
+        
+            <select th:field=="${teacher.year}">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            </div>
+            
+            <div class="form-group"> 
+            <input type="text" th:field=="${teacher.email}" name="email" placeholder="teacher email"/>
+        
+            </div>
+        
+            
+        
+            <input type="submit" class="submit" value="Submit" />   
+        </form>
+        </div>
 
-
-    <select th:field=="${teacher.course}">
-        <option th:each="course : ${T(ElektronenDnevnik.entities.Course).values()}"
-                th:value="${course}"
-                th:text="${course}">
-        </option>
-    </select>
-
-    <select th:field=="${teacher.year}">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
-
-    <input type="text" th:field=="${teacher.email}" name="email" placeholder="teacher email"/>
-
-
-    <button type="submit">Update Teacher</button>
-</form>
 </body>
 </html>

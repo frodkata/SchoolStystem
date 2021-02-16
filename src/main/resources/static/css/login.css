@@ -1,0 +1,120 @@
+
+@font-face {
+  font-family: 'blzee';
+  src: url('../fonts/blzee.woff2') format('woff2'),
+      url('../fonts/blzee.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: #040404;
+   color: white;
+
+   
+   font-family: 'Roboto', sans-serif;  
+    font-weight: bold;
+
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+/*Login-------------------------------------------------------------------------*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.767);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, .4), 0 6px 20px 0 rgba(0, 0, 0, 4.19);
+    padding: 1%;
+    width: 30%;
+    position: relative;
+    margin: auto;
+    top: 100px;
+}
+
+h1{
+  font-family: "blzee";
+
+}
+
+
+form {
+    display: grid;
+    grid-gap: 1rem;
+  }
+  
+  input {
+    background: rgb(7, 6, 6);
+    color: white;
+    text-align: center; 
+
+    transition: all 200ms ease;
+    border-left: 0 solid transparent;
+    border: 0;
+    height: 1.8rem;
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+  }
+
+  ::-webkit-input-placeholder{
+    text-align: center;
+  }
+
+  .form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+    /*Alerts*/
+  .alert-danger{
+    background-color: #7a07079d;
+   color: white;
+   transition: all 200ms ease;
+   box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+   padding: 10px;
+  }
+
+  .alert-info{
+    
+      background-color: #0b7a07c5;
+     color: white;
+     transition: all 200ms ease;
+     box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+     padding: 10px;
+    
+  
+  }
+   
+    /*Buttons*/
+  .submit{
+    display:inline-block; 
+    padding:0.7em 1.4em; 
+    margin:0 0.3em 0.3em 0;
+     border-radius:0.15em; 
+     box-sizing: border-box; 
+     text-decoration:none; 
+     font-family:'Roboto',sans-serif;
+      text-transform:uppercase; 
+      font-weight:400; color:#FFFFFF; 
+      background-color:#000000a6;
+     box-shadow:inset 0 -0.6em 0 -0.35em rgba(209, 16, 16, 0.075); 
+     text-align:center; position:relative;
+}
+
+.submit:hover {
+    background-color:#ff33338e;
+}
+
