@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Controller
 public class AdminController {
@@ -46,7 +47,7 @@ public class AdminController {
 
 
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index() {
 
         return "admin/index";
@@ -80,16 +81,16 @@ public class AdminController {
             }
         }
 
+
         //VALIDATE FORM
         if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
             return "admin/studentPanel/newStudent";
         }
         //As Parent is created by creating Student, i couldn't place @Valid to validate parent model, as there is no parent model that gets passed,
         //so validation on parent fields is done  here
-        else if(student.getParent().getFirstName().equals("")
-                || student.getParent().getLastName().equals("")
-                || student.getParent().getFirstName().matches("[a-zA-Z]+")
-                || student.getParent().getLastName().matches("[a-zA-Z]+")){
+        else if(   !Pattern.matches("[a-zA-Z]+",student.getParent().getFirstName())
+                || !Pattern.matches("[a-zA-Z]+",student.getParent().getLastName()) )
+        {
             return "redirect:/showNewStudentForm?parentError";
         }
         else{
@@ -116,7 +117,7 @@ public class AdminController {
             //Save new userProfile to repository
             userService.save(userProfile);
 
-            return "redirect:/?success";
+            return "redirect:/index?email";
         }
 
 
@@ -162,7 +163,7 @@ public class AdminController {
 
 
 
-        return "redirect:/?success";
+        return "redirect:/index?success";
     }
 
 
@@ -186,7 +187,7 @@ public class AdminController {
             return "admin/studentPanel/updateStudent";
         }else {
             studentService.saveStudent(student);
-            return "redirect:/?success";
+            return "redirect:/index?success";
         }
     }
 
@@ -232,7 +233,7 @@ public class AdminController {
             userService.save(userProfile);
 
 
-            return "redirect:/";
+            return "redirect:/index?email";
         }
 
     }
@@ -260,7 +261,7 @@ public class AdminController {
         //Delete Teacher from repository
         teacherService.deleteTeacherById(id);
 
-        return "redirect:/?success";
+        return "redirect:/index?success";
     }
 
     @GetMapping("/showFormForUpdateTeacher/{id}")
@@ -285,7 +286,7 @@ public class AdminController {
         teacherService.saveTeacher(teacher);
 
 
-        return "redirect:/?success";
+        return "redirect:/index?success";
     }
 
     }
@@ -311,7 +312,7 @@ public class AdminController {
         }else {
             //Only one headmaster can exist
             if(headmasterService.getHeadmaster() != null){ //Check if there is an existing headmaster
-                return "redirect:/?error";
+                return "redirect:/index?error";
 
             }else{
                 //Create new UserProfile with ROLE.HEADMASTER
@@ -334,7 +335,7 @@ public class AdminController {
                 userService.save(userProfile);
 
 
-                return "redirect:/";
+                return "redirect:/index?email";
             }
 
         }
@@ -369,7 +370,7 @@ public class AdminController {
         //Delete Headmaster from repository
         headmasterService.deleteHeadmaster();
 
-        return "redirect:/?success";
+        return "redirect:/index?success";
     }
 
     //update Headmaster
@@ -392,7 +393,7 @@ public class AdminController {
             return "admin/headmasterPanel/updateHeadmaster";
         }   else {
             headmasterService.saveHeadmaster(headmaster);
-            return "redirect:/?success";
+            return "redirect:/index?success";
         }
 
     }
