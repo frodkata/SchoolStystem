@@ -3,30 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>New Headmaster</title>
+    <link rel="stylesheet" th:href="@{../../css/panel.css}" />
+
 </head>
 <body>
+    <div class="navbar">
+        <a th:href = "@{/}" class="primary-button">🏠 Home </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Admin</span>
+      </div>
 
+<div class="container">
+    <h3>New Headmaster</h3>
+    <form th:action="@{/saveHeadmaster}" method="post" th:object="${headmaster}">
 
+        <div class="form-group">
+            <input type="text" th:field=="${headmaster.firstName}" name="name" placeholder="headmaster first name"/>
+        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+    
+        <input type="text" th:field=="${headmaster.lastName}" name="name" placeholder="headmaster last name"/> <p></p>
+        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" th:field=="${headmaster.schoolName}" name="name" placeholder="School name"/>
+        <span th:if="${#fields.hasErrors('schoolName')}" th:errors="*{schoolName}"></span>
+    
+        <input type="text" th:field=="${headmaster.schoolAddress}" name="name" placeholder="School address "/>
+        <span th:if="${#fields.hasErrors('schoolAddress')}" th:errors="*{schoolAddress}"></span>
+        </div>
+        
+        <div class="form-group">
+             <input type="text" th:field=="${headmaster.email}" name="name" placeholder="Valid Email"/>
+        </div>
+    
+       
+    
+    
+    
+    
+        <input type="submit" class="submit" value="Submit" />   
+     </form>
+</div>
 
-<form th:action="@{/saveHeadmaster}" method="post" th:object="${headmaster}">
-    <input type="text" th:field=="${headmaster.firstName}" name="name" placeholder="headmaster first name"/>
-    <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
-
-    <input type="text" th:field=="${headmaster.lastName}" name="name" placeholder="headmaster last name"/> <p></p>
-    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
-
-    <input type="text" th:field=="${headmaster.schoolName}" name="name" placeholder="School name"/>
-    <span th:if="${#fields.hasErrors('schoolName')}" th:errors="*{schoolName}"></span>
-
-    <input type="text" th:field=="${headmaster.schoolAddress}" name="name" placeholder="School address "/>
-    <span th:if="${#fields.hasErrors('schoolAddress')}" th:errors="*{schoolAddress}"></span>
-
-    <input type="text" th:field=="${headmaster.email}" name="name" placeholder="Valid Email"/>
-
-
-
-
-    <button type="submit">Save Headmaster</button>
-</form>
 </body>
 </html>

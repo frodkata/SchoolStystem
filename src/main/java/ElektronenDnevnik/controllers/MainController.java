@@ -24,14 +24,14 @@ public class MainController {
 
     //REDIRECT EACH ROLE TO APPROPRIATE MENU
     //https://stackoverflow.com/questions/45709333/page-redirecting-depending-on-role-using-spring-security-and-thymeleaf-spring
-    @GetMapping("/success")
+    @GetMapping("/")
     public void success(HttpServletRequest request, HttpServletResponse response, Authentication authResult) throws IOException, ServletException {
 
         String role =  authResult.getAuthorities().toString();
 
         //Redirect to ADMIN page
         if(role.contains("ROLE_ADMIN")){
-            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/"));
+            response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/index"));
         }
         //Redirect to PARENT page
         else if(role.contains("ROLE_PARENT")) {

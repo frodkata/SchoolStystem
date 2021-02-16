@@ -50,7 +50,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		//https://stackoverflow.com/questions/33673300/spring-security-java-configuration-for-authenticated-users-with-a-role
-		http.authorizeRequests().antMatchers( "/", "/showNewStudentForm", "/saveStudent" , "/viewStudents" , "/deleteStudent/{id}", "/showFormForUpdateStudent/{id}", "/updateStudent", "/showNewTeacherForm" , "/saveTeacher" , "/viewTeachers" , "/deleteTeacher/{id}", "/showFormForUpdateTeacher/{id}", "/updateTeacher", "/showNewHeadmasterForm", "/saveHeadmaster" , "/viewHeadmaster", "/deleteHeadmaster", "/showFormForUpdateHeadmaster", "/updateHeadmaster", "/registration").hasRole("ADMIN")
+		http.authorizeRequests().antMatchers( "/index", "/showNewStudentForm", "/saveStudent" , "/viewStudents" , "/deleteStudent/{id}", "/showFormForUpdateStudent/{id}", "/updateStudent", "/showNewTeacherForm" , "/saveTeacher" , "/viewTeachers" , "/deleteTeacher/{id}", "/showFormForUpdateTeacher/{id}", "/updateTeacher", "/showNewHeadmasterForm", "/saveHeadmaster" , "/viewHeadmaster", "/deleteHeadmaster", "/showFormForUpdateHeadmaster", "/updateHeadmaster", "/registration").hasRole("ADMIN")
 				.antMatchers( "/parentMenu").hasRole("PARENT")
 				.antMatchers( "/teacherMenu" , "/showMarkAbsentForm/{id}" , "/markAbsent" , "/showNewGradeForm/{id}" , "/saveGrade" , "/viewGrades/{id" , "/deleteGrade/{id}").hasRole("TEACHER")
 				.antMatchers( "/headmasterMenu").hasRole("HEADMASTER")
@@ -59,7 +59,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.formLogin()
 		.loginPage("/login")
 				.permitAll()
-                .defaultSuccessUrl("/success", true)
+                .defaultSuccessUrl("/", true)
 
                 .and()
 		.logout()

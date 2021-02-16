@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>View Headmaster</title>
+    <link rel="stylesheet" th:href="@{../../css/panel.css}" />
+
 </head>
 <body>
-<table border="1" class = "students-table">
+    <div class="navbar">
+        <a th:href = "@{/}" class="primary-button">🏠 Home </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Admin</span>
+      </div>
+
+      <div class="container">
+
+
+<table border="1" class = "headmaster-table">
 
 
 
@@ -31,11 +42,12 @@
         <td th:text="${headmaster.userProfile.username}"></td>
         <td th:text="${headmaster.email}"></td>
 
-        <td>  <a th:href="@{/deleteHeadmaster}" class="edit-button" > X </a> |
-        <a th:href="@{/showFormForUpdateHeadmaster}" class="edit-button" > Update </a>
+        <td>  <a th:href="@{/deleteHeadmaster}" class="edit-button" > Delete 🗑️  </a> |
+        <a th:href="@{/showFormForUpdateHeadmaster}" class="edit-button" > Update 📝</a>
         </td>
     </tr>
     </tbody>
 </table>
+</div>
 </body>
 </html>

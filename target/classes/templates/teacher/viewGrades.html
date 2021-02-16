@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>View Grades</title>
-</head>
-<body>
 
-<table border="1" class = "students-table">
-    <thead>
-    <tr>
-        grade
-    </tr>
 
-    </thead>
+      <div class="container">
+        <table border="1" class = "students-table">
+            <thead>
 
-    <tbody>
-    <tr th:each="grades : ${gradesList}">
-        <td th:text="${grades.grade}"></td>
-        <td>
-            <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="edit-button" > X </a>
-        </td>
+            </thead>
+        
+            <tbody>
+            <tr th:each="grades : ${gradesList}">
+                <td th:text="${grades.grade}"></td>
+                <td>
+                    <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="edit-button" >Delete Grade 🗑️ </a>
+                </td>
+        
+            </tr>
+            </tbody>
+        </table>
+        
+      </div>
 
-    </tr>
-    </tbody>
-</table>
-
-</body>
-</html>

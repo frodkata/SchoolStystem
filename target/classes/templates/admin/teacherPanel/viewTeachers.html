@@ -3,40 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>View Teachers</title>
+    <link rel="stylesheet" th:href="@{../../css/panel.css}" />
+
 </head>
 <body>
-<table border="1" class = "students-table">
+    <div class="navbar">
+        <a th:href = "@{/}" class="primary-button">🏠 Home </a> 
+        <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
+        <span>Admin</span>
+      </div>
+
+      <div class="container"> 
+        <table border="1" class = "students-table">
 
 
 
-    <thead>
-    <tr>
-        <th> Teacher </th>
-        <th> Course </th>
-        <th> Year </th>
-        <th> Username</th>
-        <th> Email</th>
-    </tr>
+            <thead>
+            <tr>
+                <th> Teacher </th>
+                <th> Course </th>
+                <th> Year </th>
+                <th> Username</th>
+                <th> Email</th>
+            </tr>
+        
+            </thead>
+        
+        
+        
+            <tbody>
+            <tr th:each="teacher : ${teacherList}">
+                <td th:text="${teacher.firstName}"></td>
+                <td th:text="${teacher.course}"></td>
+                <td th:text="${teacher.year}"></td>
+                <td th:text="${teacher.userProfile.username}"></td>
+                <td th:text="${teacher.email}"></td>
+        
+        
+                <td>   <a th:href="@{/deleteTeacher/{id}(id=${teacher.id})}" class="edit-button" >  Delete 🗑️ </a> |
+                    <a th:href="@{/showFormForUpdateTeacher/{id}(id=${teacher.id})}" class="edit-button" >Update 📝 </a>
+        
+                </td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
 
-    </thead>
-
-
-
-    <tbody>
-    <tr th:each="teacher : ${teacherList}">
-        <td th:text="${teacher.firstName}"></td>
-        <td th:text="${teacher.course}"></td>
-        <td th:text="${teacher.year}"></td>
-        <td th:text="${teacher.userProfile.username}"></td>
-        <td th:text="${teacher.email}"></td>
-
-
-        <td>   <a th:href="@{/deleteTeacher/{id}(id=${teacher.id})}" class="edit-button" > X </a> |
-            <a th:href="@{/showFormForUpdateTeacher/{id}(id=${teacher.id})}" class="edit-button" > Update </a>
-
-        </td>
-    </tr>
-    </tbody>
-</table>
 </body>
 </html>

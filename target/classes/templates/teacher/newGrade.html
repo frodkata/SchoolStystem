@@ -1,40 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New Grade</title>
-</head>
-<body>
-
-<form th:action="@{/saveGrade}" method="post" th:object="${grades}" >
 
 
-    <input type="hidden" th:field="*{id}" />
-    <input type="hidden" th:field="*{student.id}" />
+<div class="container">
+    <form th:action="@{/saveGrade}" method="post" th:object="${grades}" >
 
 
-    <h1>Add Grade</h1>
+        <input type="hidden" th:field="*{id}" />
+        <input type="hidden" th:field="*{student.id}" />
+    
+    
+        <h1>Add Grade</h1>
+    
+            <select th:field="*{grade}" >
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+    
+    
+    
+    
+    
+        <button type="submit" class="submit">Save</button>
+    
+    
+    
+    
+    
+    
+    </form>
+    
+</div>
 
-        <select th:field="*{grade}" >
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-
-
-
-
-
-    <button type="submit" class="submit">Save</button>
-
-
-
-
-
-
-</form>
-
-</body>
-</html>
