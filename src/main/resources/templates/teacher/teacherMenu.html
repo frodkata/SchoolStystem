@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <title>Teacher panel</title>
     <link rel="stylesheet" th:href="@{../css/panel.css}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
 
-</head>
-<body>
+            var id;
+
+            function getId(id){
+               this.id = id;
+            }
+
+
+
+        $(document).ready(function(){
+
+            $("#loading").hide()
+
+          $("#markAbsent").click(function(){
+            $("#loading").fadeIn();
+            $(".ajax").load("/showMarkAbsentForm/" + id);
+            $("#loading").fadeOut();
+
+          });
+
+          $("#newGrade").click(function(){
+            $("#loading").fadeIn();
+            $(".ajax").load("/showNewGradeForm/" + id);
+            $("#loading").fadeOut();
+          });
+
+           $("#viewGrade").click(function(){
+            $("#loading").fadeIn();
+            $(".ajax").load("/viewGrades/" + id);
+            $("#loading").fadeOut(600);
+
+          });
+        });
+
+
+
+
+
+    </script>
+    </head>
+    <body>
     <div class="navbar">
         <a th:href = "@{/showChangePasswordForm}" class="primary-button">🗝️ Change password</a> 
         <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
@@ -15,8 +55,6 @@
 
     <div class="container"> 
         <table border="1" >
-
-
 
             <thead>
             <tr>
@@ -32,9 +70,9 @@
             <tr th:each="student : ${studentList}" >
                 <td th:text="${student.firstName}"></td>
                 <td>
-                    <a th:href="@{/showMarkAbsentForm/{id}(id=${student.id})}" class="edit-button" > Mark Absent 📅</a> 
-                    <a th:href="@{/showNewGradeForm/{id}(id=${student.id})}" class="edit-button" > New Grade 📝 </a> 
-                    <a th:href="@{/viewGrades/{id}(id=${student.id})}" class="edit-button" > View Grades 🔢 </a> 
+                    <a  id="markAbsent" th:attr="onclick=|getId('${student.id}')|"  > Mark Absent 📅</a>
+                    <a  id="newGrade" th:attr="onclick=|getId('${student.id}')|" > New Grade 📝 </a>
+                    <a  id="viewGrade" th:attr="onclick=|getId('${student.id}')|" > View Grades 🔢 </a>
         
         
                 </td>
@@ -42,6 +80,13 @@
         
             </tbody>
         </table>
+
+
+        <span id="loading">Loading...</span>
+
+    <div class="ajax">
+    </div>
+
     </div>
 
 

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New Grade</title>
-    <link rel="stylesheet" th:href="@{../css/panel.css}" />
 
-</head>
-<body>
-    
-    <div class="navbar">
-    <a th:href = "@{/teacherMenu}" class="primary-button">⬅️ Back</a> 
-    <a th:href = "@{/logout}" class="primary-button">&#128272 Logout </a>
-    <span>Teacher</span>
-  </div>
 
 <div class="container">
     <form th:action="@{/saveGrade}" method="post" th:object="${grades}" >
@@ -47,5 +33,3 @@
     
 </div>
 
-</body>
-</html>
