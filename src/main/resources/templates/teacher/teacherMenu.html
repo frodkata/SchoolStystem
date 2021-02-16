@@ -11,31 +11,36 @@
 
             function getId(id){
                this.id = id;
+               console.log(id);
             }
 
 
 
-        $(document).ready(function(){
+        $(window).on('load',function(){
 
             $("#loading").hide()
 
-          $("#markAbsent").click(function(){
+          $('a[id="markAbsent"]').click(function(){
             $("#loading").fadeIn();
             $(".ajax").load("/showMarkAbsentForm/" + id);
             $("#loading").fadeOut();
-
+            console.log(id);
           });
 
-          $("#newGrade").click(function(){
+          $('a[id="newGrade"]').click(function(){
             $("#loading").fadeIn();
             $(".ajax").load("/showNewGradeForm/" + id);
             $("#loading").fadeOut();
+            console.log(id);
+
           });
 
-           $("#viewGrade").click(function(){
+           $('a[id="viewGrade"]').click(function(){
             $("#loading").fadeIn();
             $(".ajax").load("/viewGrades/" + id);
             $("#loading").fadeOut(600);
+            console.log(id);
+
 
           });
         });

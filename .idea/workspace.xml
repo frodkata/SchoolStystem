@@ -4,10 +4,7 @@
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Added access exception to Security Config for Front-End static folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/markAbsent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/markAbsent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/newGrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/newGrade.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/teacherMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/teacherMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/viewGrades.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/viewGrades.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
@@ -324,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613500677990</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added AJAX to Teacher menu">
+      <created>1613511157255</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1613511157255</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -400,6 +404,7 @@
     <MESSAGE value="Added access exception to Security Config for Front-End style, fonts, images" />
     <MESSAGE value="Added access exception to Security Config for Front-End static folder" />
     <MESSAGE value="Added validation for EGN and Parent name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation for EGN and Parent name" />
+    <MESSAGE value="Added AJAX to Teacher menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AJAX to Teacher menu" />
   </component>
 </project>
