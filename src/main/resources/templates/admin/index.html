@@ -41,6 +41,9 @@
         <div class="alert-success">Operation successful!</div>
     </div>
 
+    <div th:if="${param.email}">
+        <div class="alert-success">Email with password and username sent!</div>
+    </div>
 
     <div th:if="${param.error}">
         <div class="alert-danger">A headmaster already exists!</div>
