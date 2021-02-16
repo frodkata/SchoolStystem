@@ -72,15 +72,27 @@ public class AdminController {
 
     @PostMapping("/saveStudent")
     public String saveStudent(@Valid @ModelAttribute("student") Student student,BindingResult bindingResult) {
+
+
+        for ( Student s: studentService.getAll()) {
+            if(s.getEgn().equals(student.getEgn())){
+                return "redirect:/showNewStudentForm?egnError";
+            }
+        }
+
         //VALIDATE FORM
         if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
             return "admin/studentPanel/newStudent";
         }
-        //As Parent is created by creating Student, i couldn't place @Valid to validate parent model, as there is no parent model,
+        //As Parent is created by creating Student, i couldn't place @Valid to validate parent model, as there is no parent model that gets passed,
         //so validation on parent fields is done  here
-        else if(student.getParent().getFirstName().equals("") || student.getParent().getLastName().equals("")){
-            return "admin/studentPanel/newStudent";
-        }else{
+        else if(student.getParent().getFirstName().equals("")
+                || student.getParent().getLastName().equals("")
+                || student.getParent().getFirstName().matches("[a-zA-Z]+")
+                || student.getParent().getLastName().matches("[a-zA-Z]+")){
+            return "redirect:/showNewStudentForm?parentError";
+        }
+        else{
 
 
             //Both Student and Parent are created at the same time, based on the idea that the Parent has access to the account
@@ -104,7 +116,7 @@ public class AdminController {
             //Save new userProfile to repository
             userService.save(userProfile);
 
-            return "redirect:/";
+            return "redirect:/?success";
         }
 
 
