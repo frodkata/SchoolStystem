@@ -5,6 +5,7 @@ A little project made for my Java uni course. Basically, a system that manages a
 They are explained further below.
 <h3>Technologies used: </h3>
 - Spring Boot(Spring Data/Hibernate, Spring Security) <br>
+- Mockito service layer tests <br>
 - Java Mail and Apache Commons email validator <br>
 - Thymeleaf + CSS <br>
 - JQuery + Ajax  <br>
