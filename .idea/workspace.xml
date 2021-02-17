@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Whenever a user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" afterDir="false" />
@@ -403,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613587041129</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Pics for readme">
+      <created>1613589122044</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613589122044</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -565,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Validate Headmaster data" />
     <MESSAGE value="Fixed issue with Update methods and validation" />
     <MESSAGE value="Fixed open form tag" />
     <MESSAGE value="Added email functionality." />
@@ -590,6 +597,7 @@
     <MESSAGE value="Fix links coloring and underline" />
     <MESSAGE value="Added styled delete and edit buttons" />
     <MESSAGE value="Whenever a user is created, set a primary 6 chars random string as password that gets sent to User email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Whenever a user is created, set a primary 6 chars random string as password that gets sent to User email" />
+    <MESSAGE value="Pics for readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pics for readme" />
   </component>
 </project>
