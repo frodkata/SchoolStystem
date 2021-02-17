@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page">
+    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Whenever a user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/PasswordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/PasswordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/panel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/teacherMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/teacherMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/viewGrades.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/viewGrades.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/services/UserServiceImpl.class" afterDir="false" />
@@ -399,7 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613577726372</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added styled delete and edit buttons">
+      <created>1613586924767</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613586924767</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Whenever a user is created, set a primary 6 chars random string as password that gets sent to User email">
+      <created>1613587041129</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1613587041129</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -516,6 +520,31 @@
             </State>
           </value>
         </entry>
+        <entry key="5">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -531,12 +560,11 @@
         <option value="2" />
         <option value="3" />
         <option value="4" />
+        <option value="5" />
       </set>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed Bootstrap" />
-    <MESSAGE value="Validate Teacher data" />
     <MESSAGE value="Validate Headmaster data" />
     <MESSAGE value="Fixed issue with Update methods and validation" />
     <MESSAGE value="Fixed open form tag" />
@@ -560,6 +588,8 @@
     <MESSAGE value="Added Email validation on update and create using Apache Commons" />
     <MESSAGE value="Added wrong email errors" />
     <MESSAGE value="Fix links coloring and underline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix links coloring and underline" />
+    <MESSAGE value="Added styled delete and edit buttons" />
+    <MESSAGE value="Whenever a user is created, set a primary 6 chars random string as password that gets sent to User email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Whenever a user is created, set a primary 6 chars random string as password that gets sent to User email" />
   </component>
 </project>
