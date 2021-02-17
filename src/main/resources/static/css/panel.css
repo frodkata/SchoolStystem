@@ -14,6 +14,12 @@ body {
   background-size: cover;
   }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+
   /* Style the top navigation bar */
   .navbar {
     overflow: hidden;
@@ -277,3 +283,19 @@ table a:hover{
   
   }
 
+/*Error page*/
+
+.error #title{
+  font-size: 400%;
+  color: rgb(139, 37, 37);
+}
+
+.error span{
+  font-size: 200%;
+}
+
+.error a:hover{
+  padding: 4%;
+  cursor: pointer;
+
+}
