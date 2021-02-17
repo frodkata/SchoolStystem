@@ -41,6 +41,9 @@
   
     
       <div class="form-group">
+          <div th:if="${param.emailError}">
+              <span class="alert-error">Email is invalid!</span>
+          </div>
         <input type="text" th:field=="${headmaster.email}" name="name" placeholder="headmaster email"/>
     </div>
       

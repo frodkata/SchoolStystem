@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/PasswordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/PasswordDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
@@ -369,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613521378904</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added Email validation on update and create using Apache Commons">
+      <created>1613565262545</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1613565262545</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -505,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed form sending NULL EGN" />
     <MESSAGE value="Changed access to /registration to &quot;ADMIN&quot; only" />
     <MESSAGE value="Added Bootstrap to views" />
     <MESSAGE value="Removed Bootstrap" />
@@ -530,6 +533,7 @@
     <MESSAGE value="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page" />
     <MESSAGE value="Added custom error pages" />
     <MESSAGE value="Added style to custom errors and password change/register admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added style to custom errors and password change/register admin" />
+    <MESSAGE value="Added Email validation on update and create using Apache Commons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Email validation on update and create using Apache Commons" />
   </component>
 </project>

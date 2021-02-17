@@ -54,7 +54,10 @@
             </select>
             </div>
             
-            <div class="form-group"> 
+            <div class="form-group">
+                <div th:if="${param.emailError}">
+                    <span class="alert-error">Email is invalid!</span>
+                </div>
             <input type="text" th:field=="${teacher.email}" name="email" placeholder="teacher email"/>
         
             </div>

@@ -15,6 +15,11 @@
 
       <div class="container"> 
           <h3>Update Student</h3>
+
+          <div th:if="${param.egnError}">
+              <span class="alert-error">Student with given EGN exists!</span>
+          </div>
+
         <form th:action="@{/updateStudent}" method="post" th:object="${student}" >
 
             <input type="hidden" th:field="*{id}" />
@@ -54,8 +59,13 @@
         
             </div>
             
-            <h5>Parent Email: </h5>         
-            <div class="form-group"> 
+            <h5>Parent Email: </h5>
+
+            <div class="form-group">
+                <div th:if="${param.emailError}">
+                    <span class="alert-error">Email is invalid!</span>
+                </div>
+
                 <input type="text" th:field=="${student.parent.email}" name="email" placeholder="Parent Email"/>
             </div>   
             
