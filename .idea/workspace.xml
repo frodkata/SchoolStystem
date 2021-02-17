@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/PasswordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/entities/PasswordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/updateStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/updateStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/newTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/newTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacherPanel/updateTeacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/panel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/updateHeadmaster.html" afterDir="false" />
@@ -80,8 +77,8 @@
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\error" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\static\images" />
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\error" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\static\fonts" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\static\css" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources" />
@@ -373,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613565262545</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added wrong email errors">
+      <created>1613565304045</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1613565304045</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -509,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed access to /registration to &quot;ADMIN&quot; only" />
     <MESSAGE value="Added Bootstrap to views" />
     <MESSAGE value="Removed Bootstrap" />
     <MESSAGE value="Validate Teacher data" />
@@ -534,6 +537,7 @@
     <MESSAGE value="Added custom error pages" />
     <MESSAGE value="Added style to custom errors and password change/register admin" />
     <MESSAGE value="Added Email validation on update and create using Apache Commons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Email validation on update and create using Apache Commons" />
+    <MESSAGE value="Added wrong email errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added wrong email errors" />
   </component>
 </project>
