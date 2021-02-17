@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import org.apache.commons.validator.routines.EmailValidator;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -74,7 +74,11 @@ public class AdminController {
     @PostMapping("/saveStudent")
     public String saveStudent(@Valid @ModelAttribute("student") Student student,BindingResult bindingResult) {
 
+        //Used for @EMAIL validation below
+        EmailValidator validator = EmailValidator.getInstance();
 
+
+        //Check repo for existing students with given EGN and return error if EGN matches
         for ( Student s: studentService.getAll()) {
             if(s.getEgn().equals(student.getEgn())){
                 return "redirect:/showNewStudentForm?egnError";
@@ -87,11 +91,15 @@ public class AdminController {
             return "admin/studentPanel/newStudent";
         }
         //As Parent is created by creating Student, i couldn't place @Valid to validate parent model, as there is no parent model that gets passed,
-        //so validation on parent fields is done  here
+        //so i couldn't use Hibernate validation.
+        //Checking if firstName and lastName contain latin characters
         else if(   !Pattern.matches("[a-zA-Z]+",student.getParent().getFirstName())
-                || !Pattern.matches("[a-zA-Z]+",student.getParent().getLastName()) )
-        {
+                || !Pattern.matches("[a-zA-Z]+",student.getParent().getLastName()) ) {
             return "redirect:/showNewStudentForm?parentError";
+        }
+        //Validate Email address using Apache commons validator
+        else if(!validator.isValid(student.getParent().getEmail())){
+            return "redirect:/showNewStudentForm?emailError";
         }
         else{
 
@@ -114,6 +122,7 @@ public class AdminController {
 
             //Save new student to repository
             studentService.saveStudent(student);
+
             //Save new userProfile to repository
             userService.save(userProfile);
 
@@ -182,10 +191,27 @@ public class AdminController {
     //save updated Teacher without changing UserProfile
     @PostMapping("/updateStudent")
     public String updateStudent(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult) {
-        //VALIDATE
+        //Used for @EMAIL validation below
+        EmailValidator validator = EmailValidator.getInstance();
+
+        //Check repo for existing students with given EGN and return error if EGN matches
+        for ( Student s: studentService.getAll()) {
+            //Also check if existing EGN doesn't belong to the student being updated
+            //in order to keep it the same
+            if(s.getEgn().equals(student.getEgn()) && !s.getId().equals(student.getId()) ){
+                return "redirect:/showFormForUpdateStudent/"+ student.getId() + "?egnError";
+            }
+        }
+
+        //VALIDATE forms
         if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
             return "admin/studentPanel/updateStudent";
-        }else {
+        }
+        //Validate Email address using Apache commons validator
+        else if(!validator.isValid(student.getParent().getEmail())){
+            return "redirect:/showFormForUpdateStudent/"+ student.getId() + "?emailError";
+        }
+        else {
             studentService.saveStudent(student);
             return "redirect:/index?success";
         }
@@ -208,9 +234,17 @@ public class AdminController {
 
     @PostMapping("/saveTeacher")
     public String saveTeacher(@Valid @ModelAttribute("teacher") Teacher teacher,BindingResult bindingResult) {
+        //Used for @EMAIL validation below
+        EmailValidator validator = EmailValidator.getInstance();
+
         if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
             return "admin/teacherPanel/newTeacher";
-        }else{
+        }
+        //Validate Email address using Apache commons validator
+        else if(!validator.isValid(teacher.getEmail())){
+            return "redirect:/showNewTeacherForm?emailError";
+        }
+        else{
 
 
             //Create new UserProfile with ROLE.TEACHER
@@ -229,6 +263,7 @@ public class AdminController {
 
             //Save new Teacher to repository
             teacherService.saveTeacher(teacher);
+
             //Save new UserProfile to repository
             userService.save(userProfile);
 
@@ -280,14 +315,23 @@ public class AdminController {
     //save updated Teacher without changing UserProfile
     @PostMapping("/updateTeacher")
     public String updateTeacher(@Valid @ModelAttribute("teacher") Teacher teacher, BindingResult bindingResult) {
-    if(bindingResult.hasErrors()){
+        //Used for @EMAIL validation below
+        EmailValidator validator = EmailValidator.getInstance();
+
+        //Validate forms
+        if(bindingResult.hasErrors()){
         return "admin/teacherPanel/updateTeacher";
-    }else{
-        teacherService.saveTeacher(teacher);
+        }
+        //Validate Email address using Apache commons validator
+        else if(!validator.isValid(teacher.getEmail())){
+            return "redirect:/showFormForUpdateTeacher/" + teacher.getId() + "?emailError";
+        }
+        else{
+            teacherService.saveTeacher(teacher);
 
 
-        return "redirect:/index?success";
-    }
+            return "redirect:/index?success";
+        }
 
     }
 
@@ -306,10 +350,18 @@ public class AdminController {
 
     @PostMapping("/saveHeadmaster")
     public String saveHeadmaster(@Valid @ModelAttribute("headmaster") Headmaster headmaster, BindingResult bindingResult) {
+        //Used for @EMAIL validation below
+        EmailValidator validator = EmailValidator.getInstance();
 
+        //Validate forms
         if (bindingResult.hasErrors() ) {  //check if entity constraints are satisfied
             return "admin/headmasterPanel/newHeadmaster";
-        }else {
+        }
+        //Validate Email address using Apache commons validator
+        else if(!validator.isValid(headmaster.getEmail())){
+            return "redirect:/showNewHeadmasterForm?emailError";
+        }
+        else {
             //Only one headmaster can exist
             if(headmasterService.getHeadmaster() != null){ //Check if there is an existing headmaster
                 return "redirect:/index?error";
@@ -389,9 +441,18 @@ public class AdminController {
     //save updated Headmaster without changing UserProfile
     @PostMapping("/updateHeadmaster")
     public String updateHeadmaster(@Valid @ModelAttribute("headmaster") Headmaster headmaster, BindingResult bindingResult) {
+        //Used for @EMAIL validation below
+        EmailValidator validator = EmailValidator.getInstance();
+
+        //Validate forms
         if(bindingResult.hasErrors()){
             return "admin/headmasterPanel/updateHeadmaster";
-        }   else {
+        }
+        //Validate Email address using Apache commons validator
+        else if(!validator.isValid(headmaster.getEmail())){
+            return "redirect:/showFormForUpdateHeadmaster?emailError";
+        }
+        else {
             headmasterService.saveHeadmaster(headmaster);
             return "redirect:/index?success";
         }
