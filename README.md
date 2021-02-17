@@ -15,7 +15,7 @@ Greeted by a simple login screen, each user can log into their profile panel bas
 Users can't register themselves! Each user is registered by the mercy of the [ADMIN]. <br> By registering either a [TEACHER], [STUDENT] or [HEADMASTER] 
 users are sent an EMAIL with their respective username and primary password. <br> The primary password is a random character string of length 6 which is used to log in for the first time and can be changed 
 from <br> the Change Password menu. <br>
-<b>NOTE: <i>By registering Students, the Parent profile is created and serves as the profile, as the Parent is expected to have access to child's grades and absences </i></b> <p></p>
+<b>NOTE: <i>By registering Students, the Parent profile is created and serves as the main profile, as the Parent is expected to have access to child's grades and absences </i></b> <p></p>
 <b>Creating and then deleting a student: </b>
 <img src="/src/main/resources/static/images/saveStudent.gif"/>
 Admins have access to every registered user infromation except their passwords. Other than creating, they can Update information and Delete information for users. <br>
