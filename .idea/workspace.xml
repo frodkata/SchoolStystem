@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="Added access exception to Security Config for Front-End static folder">
+    <list default="true" id="9653092e-403f-49a6-bbb4-264771326a7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ElektronenDnevnik/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/newHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/headmasterPanel/viewHeadmaster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/studentPanel/viewStudents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/newTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/newTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacherPanel/viewTeachers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/headmaster/headmasterMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/headmaster/headmasterMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parent/parentMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parent/parentMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/markAbsent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/markAbsent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/newGrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/newGrade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/teacherMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/teacherMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/viewGrades.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/viewGrades.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ElektronenDnevnik/controllers/MainController.class" afterDir="false" />
     </list>
     <list id="3b857670-1d2c-465f-9feb-c8915a8a91ec" name="Revert &quot;Regex ot Student name: Only accept latin letters&quot;" comment="Revert &quot;Regex ot Student name: Only accept latin letters&quot;&#10;&#10;This reverts commit be873f2b">
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/studentPanel/newStudent.html" afterDir="false" />
@@ -86,11 +74,11 @@
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\error" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\static\images" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\static\fonts" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\static\css" />
       <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources" />
-      <recent name="F:\Java Projects\ElektronenDnevnik\src\main\resources\templates\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -337,7 +325,28 @@
       <option name="project" value="LOCAL" />
       <updated>1613514465183</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixed Security issues: Moved admin panel to &quot;index&quot; instead of &quot;/&quot;">
+      <created>1613515370023</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1613515370023</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixed Security issues: Changed success/role redirecting from &quot;/success&quot; to &quot;/&quot;">
+      <created>1613515469636</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1613515469636</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page">
+      <created>1613515529585</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1613515529585</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -379,6 +388,56 @@
             </State>
           </value>
         </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="3">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -391,6 +450,8 @@
     <option name="OPEN_TABS">
       <set>
         <option value="1" />
+        <option value="2" />
+        <option value="3" />
       </set>
     </option>
   </component>
@@ -415,6 +476,9 @@
     <MESSAGE value="Added validation for EGN and Parent name" />
     <MESSAGE value="Added AJAX to Teacher menu" />
     <MESSAGE value="Fixed Jquery issue with multiple selectors with same id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Jquery issue with multiple selectors with same id" />
+    <MESSAGE value="Fixed Security issues: Moved admin panel to &quot;index&quot; instead of &quot;/&quot;" />
+    <MESSAGE value="Fixed Security issues: Changed success/role redirecting from &quot;/success&quot; to &quot;/&quot;" />
+    <MESSAGE value="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added notification: Whenever a profile is created and sent email with details, throw success msg on home admin page" />
   </component>
 </project>
