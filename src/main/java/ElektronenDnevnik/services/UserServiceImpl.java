@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public String randomStringForUsername(){
+	public String randomString(){
 		//Generate random string for unique username
 		String randomString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		StringBuilder salt = new StringBuilder();

@@ -9,7 +9,7 @@ public interface UserService extends UserDetailsService{
 	UserProfile save(UserProfile userProfile);
 	UserProfile getCurrentUser();
 	void deleteUserById(Long id);
-	String randomStringForUsername();
+	String randomString();
 	void changePassword(UserProfile userProfile, String password);
 
 }

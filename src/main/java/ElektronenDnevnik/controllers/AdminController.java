@@ -107,10 +107,10 @@ public class AdminController {
             //Both Student and Parent are created at the same time, based on the idea that the Parent has access to the account
             //Create new UserProfile with ROLE.PARENT
             UserProfile userProfile = new UserProfile();
-            userProfile.setUsername("S_" +  userService.randomStringForUsername()); //Username with first 4 characters from EGN
-            userProfile.setPassword(student.getEgn());
-            userProfile.setRole(Role.PARENT); //Set role
-            student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student entity
+            userProfile.setUsername("S_" +  userService.randomString()); //Random 6digit string
+            userProfile.setPassword(userService.randomString()); //Random 6digit string
+            userProfile.setRole(Role.PARENT); //Set role on account to Parent
+            student.getParent().setUserProfile(userProfile); //Add userProfile profile to Student's Paren entity
 
             //Send password and username to Parent email
             SimpleMailMessage message = new SimpleMailMessage();
@@ -249,8 +249,8 @@ public class AdminController {
 
             //Create new UserProfile with ROLE.TEACHER
             UserProfile userProfile = new UserProfile();
-            userProfile.setUsername("T_"+userService.randomStringForUsername()); //Create username
-            userProfile.setPassword("1234"); //TEST PASSWORD
+            userProfile.setUsername("T_"+userService.randomString()); //Create username with random 6 digit string
+            userProfile.setPassword(userService.randomString()); //Create password with 6 digit random string
             userProfile.setRole(Role.TEACHER); //Add TEACHER role to UserProfile
             teacher.setUserProfile(userProfile); //Add userProfile profile to Teacher entity
 
@@ -370,7 +370,7 @@ public class AdminController {
                 //Create new UserProfile with ROLE.HEADMASTER
                 UserProfile userProfile = new UserProfile();
                 userProfile.setUsername("H_"+headmaster.getFirstName()); //Create username
-                userProfile.setPassword("1234"); //TEST PASSWORD
+                userProfile.setPassword(userService.randomString()); //6 random digits
                 userProfile.setRole(Role.HEADMASTER); //Add HEADMASTER role to UserProfile
                 headmaster.setUserProfile(userProfile); //Add userProfile profile to Headmaster entity
 

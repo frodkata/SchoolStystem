@@ -1,5 +1,6 @@
 package ElektronenDnevnik.entities;
 
+//Used for changing User password
 public class PasswordDTO {
     String oldPassword;
     String newPassword;
