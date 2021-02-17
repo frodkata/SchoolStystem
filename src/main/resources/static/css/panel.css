@@ -204,13 +204,7 @@ td {
 
 }
 
-table tbody tr {
-  border-bottom: 1px solid #7a07079d;
-}
 
-table tbody tr:nth-of-type(even) {
-  background-color: #7a07079d;
-}
 
 table tbody tr:last-of-type {
   border-bottom: 2px solid #040404;
@@ -221,10 +215,38 @@ table tbody tr.active-row {
   color: #040404;
 }
 
-table a:hover{
-  color: rgba(206, 206, 206, 0.507);
-  cursor: pointer;
+
+.edit-button, .delete-button{
+	border-radius:3px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
 }
+
+.edit-button{
+	background-color:#165e1c;
+}
+
+.delete-button{
+	background-color:#942f11;
+}
+
+.edit-button:hover {
+  background-color:#259c0d;
+
+}
+
+.delete-button:hover {
+	background-color:#ff0000;
+}
+
+
+
 
   /*Panel Jquery*/
     #teachers, #students, #grades, #absences{

@@ -75,9 +75,9 @@
             <tr th:each="student : ${studentList}" >
                 <td th:text="${student.firstName}"></td>
                 <td>
-                    <a  id="markAbsent" th:attr="onclick=|getId('${student.id}')|"  > Mark Absent 📅</a>
-                    <a  id="newGrade" th:attr="onclick=|getId('${student.id}')|" > New Grade 📝 </a>
-                    <a  id="viewGrade" th:attr="onclick=|getId('${student.id}')|" > View Grades 🔢 </a>
+                    <a class="edit-button"  id="markAbsent" th:attr="onclick=|getId('${student.id}')|"  > Mark Absent 📅</a>
+                    <a  class="edit-button" id="newGrade" th:attr="onclick=|getId('${student.id}')|" > New Grade 📝 </a>
+                    <a  class="edit-button" id="viewGrade" th:attr="onclick=|getId('${student.id}')|" > View Grades 🔢 </a>
         
         
                 </td>

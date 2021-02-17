@@ -10,7 +10,7 @@
             <tr th:each="grades : ${gradesList}">
                 <td th:text="${grades.grade}"></td>
                 <td>
-                    <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="edit-button" >Delete Grade 🗑️ </a>
+                    <a th:href="@{/deleteGrade/{id}(id=${grades.id})}" class="delete-button" >Delete Grade 🗑️ </a>
                 </td>
         
             </tr>
