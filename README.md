@@ -1,5 +1,6 @@
 <img src="/src/main/resources/static/images/logo.png"/>
 <h1>Online school management system written in Spring Boot </h1>
+<a href="https://school-system-heroku.herokuapp.com/">Project is live here.</a> 
 A little project made for my Java uni course. Basically, a system that manages a school with different roles <br> and functionality based on school personnel. <br>
 4 roles exist: <b>[ADMIN]</b> <b>[TEACHER]</b> <b>[PARENT]</b> <b>[HEADMASTER]</b> ,  and each one of them has their own unique toolset and privileges. <br>
 They are explained further below.
@@ -9,7 +10,7 @@ They are explained further below.
 - Java Mail and Apache Commons email validator <br>
 - Thymeleaf + CSS <br>
 - JQuery + Ajax  <br>
-- PostgreSQL serverside, hosted on Heroku <a href="https://school-system-heroku.herokuapp.com/">here</a> 
+- PostgreSQL serverside, hosted on Heroku 
 <h3>Full description:</h3>
 Greeted by a simple login screen, each user can log into their profile panel based on their role. <br>
 <h4>[ADMIN]</h4>
