@@ -1,10 +1,16 @@
 <img src="/src/main/resources/static/images/logo.png"/>
 <h1>Online school management system written in Spring Boot </h1>
 <a href="https://school-system-heroku.herokuapp.com/">Project is live here.</a>  <p></p>
-A little project made for my Java uni course. <br>
-Basically, a system that manages a school with different roles <br> with functionality based on school personnel. <br>
+
+A full-stack application that provides management tools for a given school with functionality based on different roles. <br>
 4 roles exist: <b>[ADMIN]</b> <b>[TEACHER]</b> <b>[PARENT]</b> <b>[HEADMASTER]</b> ,  and each one of them has their own unique toolset and privileges. <br>
 They are explained further below. <b><i>TLDR at the bottom </i></b>
+<h3>Credentials to test the project: </h3>
+<b>Admin role:</b> User: admin ; Pass: admin <br>
+<b>Teacher role:</b> User: T_VL86G0 ; Pass: 1234 <br>
+<b>Student role:</b> User: S_6YKV6K ; Pass: 9941251234 <br>
+<b>Headmaster role:</b> User: H_Direktor ; Pass: 1234 <br>
+
 <h3>Technologies used: </h3>
 - Spring Boot(Spring Data/Hibernate, Spring Security) <br>
 - Mockito service layer tests <br>
