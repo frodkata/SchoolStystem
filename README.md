@@ -1,5 +1,6 @@
 <img src="/src/main/resources/static/images/logo.png"/>
 <h1>Online school management system written in Spring Boot </h1>
+<h2>Project is no longer live due to Heroku terminating it's free tier accounts!</h2>
 <a href="https://school-system-heroku.herokuapp.com/">Project is live here.</a>  <p></p>
 
 A full-stack application that provides management tools for a given school with functionality based on different roles. <br>
